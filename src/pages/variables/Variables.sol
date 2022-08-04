@@ -2,16 +2,17 @@
 pragma solidity ^0.8.13;
 
 contract Variables {
-    // State variables are stored on the blockchain.
+    // State Variablen werden auf der Blockchain gespeichert 
     string public text = "Hello";
     uint public num = 123;
 
     function doSomething() public {
-        // Local variables are not saved to the blockchain.
+        // Local Variablen sind nur bei Ausführung dieser Funktion existet 
+        // und werden nicht auf der Blockchain gespeichert 
         uint i = 456;
 
-        // Here are some global variables
-        uint timestamp = block.timestamp; // Current block timestamp
-        address sender = msg.sender; // address of the caller
+        // Ein paar Beispiele für global Variablen
+        uint timestamp = block.timestamp; // Aktueller Zeitstempel des letzten Blocks der Blockchain
+        address sender = msg.sender; // Adresse von dem Caller/Ausführer der Funktion
     }
 }

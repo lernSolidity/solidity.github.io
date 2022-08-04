@@ -2,7 +2,8 @@
 pragma solidity ^0.8.13;
 
 contract Constants {
-    // coding convention to uppercase constant variables
+    // Beides sind Konstanten 
+    // Als Konvetion gilt, dass Konstanten immer GROß geschrieben werden müssen.
     address public constant MY_ADDRESS = 0x777788889999AaAAbBbbCcccddDdeeeEfFFfCcCc;
     uint public constant MY_UINT = 123;
 }

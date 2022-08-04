@@ -1,10 +1,11 @@
 ---
-title: First Application
+title: Erster App
 version: 0.8.13
-description: Example of smart contract in Solidity
+description: Beispiel eines Zählers in Form eines Smart Contracts, geschrieben in Solidity 
 ---
 
-Here is a simple contract that you can get, increment and decrement the count store in this contract.
+Das folgende Beispiel ist ein einfacher Contract, welcher ein Zähler gespeichert hat. 
+Der Zähler kann entweder zurückgegeben, erhöht (+1) oder verringert (-1) werden. 
 
 ```solidity
 {{{Counter}}}

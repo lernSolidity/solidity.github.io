@@ -13,11 +13,12 @@ hljs.registerLanguage("solidity", solidity)
 const { readFile, readdir } = fs.promises
 
 function findIndexOfFrontMatter(lines: string[]): number {
-  assert(lines[0] === "---", "Front matter missing")
+  // console.log(lines)
+  assert(lines[0] == "---\r", "Front matter missing")
 
   // find front matter
   let i = 1
-  while (i < lines.length && lines[i] !== "---") {
+  while (i < lines.length && lines[i] !== "---\r") {
     i++
   }
 
@@ -31,15 +32,17 @@ interface Metadata {
 }
 
 function getMetadata(lines: string[]): Metadata {
-  assert(lines[0] === "---", "Invalid front matter")
-  assert(lines[lines.length - 1] === "---", "Invalid front matter")
+  assert(lines[0] == "---\r", "Invalid front matter")
+  assert(lines[lines.length - 1] == "---\r", "Invalid front matter")
 
-  const { title, description, version } = yaml.parse(lines.slice(1, -1).join("\n"))
-
+  var { title, description, version } = yaml.parse(lines.slice(1, -1).join("\n"))
+  console.log()
+  description = description.replace("\r", "")
   return { title, description, version }
 }
 
 function parse(file: string): { content: string; metadata: Metadata } {
+  // console.log(file)
   const lines = file.split("\n")
 
   const i = findIndexOfFrontMatter(lines)
@@ -82,6 +85,7 @@ async function mdToHtml(filePath: string) {
   // render solidity inside markdown
   const md = (await readFile(filePath)).toString()
   const { content, metadata } = parse(md)
+  console.log(metadata)
 
   const markdown = mustache.render(content, codes)
   const html = marked(markdown, {

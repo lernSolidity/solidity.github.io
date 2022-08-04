@@ -1,15 +1,15 @@
 ---
-title: Primitive Data Types
+title: Welche primitiven Daten Typen gibt es?
 version: 0.8.13
-description: Primitive data types
+description: Primitive Daten Typen in Solidity
 ---
 
-Here we introduce you to some primitive data types available in Solidity.
+In Solidity gibt es 4 primitive Datentypen: 
 
-- `boolean`
-- `uint`
-- `int`
-- `address`
+- `boolean` 
+- `uint` 
+- `int` 
+- `address` 
 
 ```solidity
 {{{Primitives}}}

@@ -6,11 +6,12 @@ contract Loop {
         // for loop
         for (uint i = 0; i < 10; i++) {
             if (i == 3) {
-                // Skip to next iteration with continue
+                // continue -> Falls i gleich 3 ist, dann springe zur nächsten Iteration der Schleife
                 continue;
             }
             if (i == 5) {
-                // Exit loop with break
+                // break -> Falls i gleich 5 ist, dann gibt es keine weitere Iteration der Schleife. 
+                // Diese Foor Loop wird es niemals schaffen bis zum Zähler i gleich 10 zu kommen. 
                 break;
             }
         }

@@ -4,13 +4,12 @@ pragma solidity ^0.8.13;
 contract ArrayReplaceFromEnd {
     uint[] public arr;
 
-    // Deleting an element creates a gap in the array.
-    // One trick to keep the array compact is to
-    // move the last element into the place to delete.
+    // Löschen eines Elementes führt zu einer "Lücke"/"default"-Wert im Array.
+    // Um das Array kompakt zu halten, gibt es einen Trick.
+    // Das Element an der Stelle index wird an das Ende des Arrays gesetzt
+    // und anschliesend die Remove Operation durchgeführt.
     function remove(uint index) public {
-        // Move the last element into the place to delete
         arr[index] = arr[arr.length - 1];
-        // Remove the last element
         arr.pop();
     }
 

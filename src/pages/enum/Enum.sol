@@ -2,7 +2,7 @@
 pragma solidity ^0.8.13;
 
 contract Enum {
-    // Enum representing shipping status
+    // Enum repräsentiert den Versandstatus
     enum Status {
         Pending,
         Shipped,
@@ -13,9 +13,12 @@ contract Enum {
 
     // Default value is the first element listed in
     // definition of the type, in this case "Pending"
+
+    // Standardwerte ist das erste Element in der Definition des Datentyps
+    // Der Standardwert für das Enum Status wäre der Zustand "Pending"
     Status public status;
 
-    // Returns uint
+    // Jeder Status wird mit einem uint verknüpft/repräsentiert
     // Pending  - 0
     // Shipped  - 1
     // Accepted - 2
@@ -25,17 +28,17 @@ contract Enum {
         return status;
     }
 
-    // Update status by passing uint into input
+    // Der Status kann verändert werden, indem eine Zahl übergeben wird
     function set(Status _status) public {
         status = _status;
     }
 
-    // You can update to a specific enum like this
+    // Ein spezifischer Status kann folgendermaßen eingestellt werden
     function cancel() public {
         status = Status.Canceled;
     }
 
-    // delete resets the enum to its first value, 0
+    // Zurücksetzen des Eums auf den Default-Wert mit der verknüpften Zahl 0
     function reset() public {
         delete status;
     }

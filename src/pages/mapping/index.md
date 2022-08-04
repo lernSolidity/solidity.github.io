@@ -1,16 +1,16 @@
 ---
 title: Mapping
 version: 0.8.13
-description: Example of using mapping in Solidity
+description: Was sind Mappings und wie werden Mappings verwendet in Solidity? 
 ---
 
-Maps are created with the syntax `mapping(keyType => valueType)`.
+Maps werden mit folgender Grammatik/Syntax erstellt: `mapping(keyType => valueType)`.
 
-The `keyType` can be any built-in value type, bytes, string, or any contract.
+Der `keyType` muss ein vordefinierte Type sein, wie zum Beispiel: bytes, string, uint, oder contract.
 
-`valueType` can be any type including another mapping or an array.
+Der `valueType` kann jeder Datentyp sein. Auch ein weiteres Mapping oder ein Array können hinter dem `keyType` hinterlegt werden.
 
-Mappings are not iterable.
+Mappings können nicht in `for` oder `while` Loops verwendet werden. Mappings sind nicht iterierbar.
 
 ```solidity
 {{{Mapping}}}

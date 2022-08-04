@@ -1,24 +1,27 @@
 ---
 title: Array
 version: 0.8.13
-description: Learn about arrays in Solidity
+description: Lerne wie Arrays in Solidity funktionieren
 ---
 
-Array can have a compile-time fixed size or a dynamic size.
+Arrays sind dynamische Datenstrukturen. Trotzdem gibt es die Möglichkeit, die Länge eines Arrays zu begrenzen. Dies kann Gaskosten reduzieren.
 
 ```solidity
 {{{Array}}}
 ```
 
-### Examples of removing array element
+### Wie wird ein Element aus dem Array entfernt?
 
 Remove array element by shifting elements from right to left
+Tricks, wie in dynamischen Arrays ein Element löschen kannst, ohne das ein "default"-Wert.
+
+Entweder verschiebt man die Elemente mit einer For-Loop:
 
 ```solidity
 {{{ArrayRemoveByShifting}}}
 ```
 
-Remove array element by copying last element into to the place to remove
+Oder das Element wird an das Ende des Arrays kopiert und dann gelöscht:
 
 ```solidity
 {{{ArrayReplaceFromEnd}}}

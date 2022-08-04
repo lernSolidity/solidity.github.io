@@ -1,12 +1,15 @@
 ---
-title: Reading and Writing to a State Variable
+title: Wie lese oder schreibt man in Zustandsvariablen?
 version: 0.8.13
-description: Reading and Writing to a State Variable
+description: Lesen and Schreiben von State Variablen / Zustandsvariablen
 ---
 
-To write or update a state variable you need to send a transaction.
+`State Variable = Zustandsvariable`
 
-On the other hand, you can read state variables, for free, without any transaction fee.
+To write or update a state variable you need to send a transaction.
+Um eine Zustandvariable zu verändern, muss eine Transaktion gesendet werden, zu einer Funktion, die den Zustand/Wert der State Variable verändert.
+
+Für das Lesen wird allerdings keine Transaktion benötigt. Das Lesen ist frei/gratis von jeglichen Transaktionsgebühren. 
 
 ```solidity
 {{{SimpleStorage}}}

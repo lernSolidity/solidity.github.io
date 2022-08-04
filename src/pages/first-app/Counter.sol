@@ -4,19 +4,20 @@ pragma solidity ^0.8.13;
 contract Counter {
     uint public count;
 
-    // Function to get the current count
+    // Gibt die aktuelle Zähler zurück
     function get() public view returns (uint) {
         return count;
     }
 
-    // Function to increment count by 1
+    // Zähler +1 addiert  
     function inc() public {
         count += 1;
     }
 
-    // Function to decrement count by 1
+    // Zähler -1 subtrahiert  
     function dec() public {
-        // This function will fail if count = 0
+        // Funktion gibt einen Fehler zurück, sofern der Zähler auf 0 steht. 
+        // Es ist nicht möglich negative Zahlen in Solidity zu erzeugen!
         count -= 1;
     }
 }

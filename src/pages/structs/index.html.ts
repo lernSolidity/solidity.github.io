@@ -1,11 +1,12 @@
 // metadata
 export const version = "0.8.13"
 export const title = "Structs"
-export const description = "An example of how to use structs in Solidity"
+export const description = "Ein Beispiel wie structs in Solidity verwendet werden können"
 
-const html = `<p>You can define your own type by creating a <code>struct</code>.</p>
-<p>They are useful for grouping together related data.</p>
-<p>Structs can be declared outside of a contract and imported in another contract.</p>
+const html = `<p>Mit <code>struct</code> können eigene Datentypen anlegt werden.</p>
+<p><code>Struct</code> sind sinnvoll, wenn primtive Datentypen in einer bestimmten Beziehung stehen.</p>
+<p><code>Struct</code> können ähnlich wie Enums außerhalb eines Contracts deklariert werden, um sie dann anschließend in seinen eigentlichen Contract zu importieren. </p>
+<p>Trotzdem ist es möglich <code>structs</code> innerhalb eines Contracts zu deklarieren und zu verwenden. </p>
 <pre><code class="language-solidity"><span class="hljs-comment">// SPDX-License-Identifier: MIT</span>
 <span class="hljs-meta"><span class="hljs-keyword">pragma</span> <span class="hljs-keyword">solidity</span> ^0.8.13;</span>
 
@@ -54,8 +55,8 @@ const html = `<p>You can define your own type by creating a <code>struct</code>.
     }
 }
 </code></pre>
-<h3 id="declaring-and-importing-struct">Declaring and importing Struct</h3>
-<p>File that the struct is declared in</p>
+<h3 id="deklarieren-und-importieren-eines-structs">Deklarieren und Importieren eines Structs</h3>
+<p>Datei, wo das <code>Struct</code> deklariert wird:</p>
 <pre><code class="language-solidity"><span class="hljs-comment">// SPDX-License-Identifier: MIT</span>
 <span class="hljs-meta"><span class="hljs-keyword">pragma</span> <span class="hljs-keyword">solidity</span> ^0.8.13;</span>
 <span class="hljs-comment">// This is saved &#x27;StructDeclaration.sol&#x27;</span>
@@ -65,7 +66,7 @@ const html = `<p>You can define your own type by creating a <code>struct</code>.
     <span class="hljs-keyword">bool</span> completed;
 }
 </code></pre>
-<p>File that imports the struct above</p>
+<p>Datei, welche das <code>Struct</code> importiert:</p>
 <pre><code class="language-solidity"><span class="hljs-comment">// SPDX-License-Identifier: MIT</span>
 <span class="hljs-meta"><span class="hljs-keyword">pragma</span> <span class="hljs-keyword">solidity</span> ^0.8.13;</span>
 
