@@ -1,12 +1,13 @@
 ---
-title: Constants
+title: Konstanten
 version: 0.8.13
-description: Constant variables
+description: Was sind konstante Variablen?
 ---
 
-Constants are variables that cannot be modified.
+Konstanten sind nicht veränderbare Variablen. 
 
-Their value is hard coded and using constants can save gas cost.
+Der Wert wird einmalig auf die Blockchain gebrannt bzw. ge-"hard coded".
+Konstanten sind eine Möglichkeit seien Smart contract Gas effizienter zu machen. 
 
 ```solidity
 {{{Constants}}}

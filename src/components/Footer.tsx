@@ -6,15 +6,15 @@ import telegram from "./telegram.png"
 import discord from "./discord.png"
 
 // Khan Academy
-const ADDRESS = "0x95a647B3d8a3F11176BAdB799b9499C671fa243a"
+const ADDRESS = "0xAE10F380F3d2A9CFb3eD957ad5829ec15A1c7e80"
 
 function Footer() {
   return (
     <div className={styles.component}>
       <div className={styles.row}>
-        <img src={sce} alt="smart contract engineer" className={styles.sce} />
-        <a href="https://www.smartcontract.engineer" target="__blank">
-          Smart Contract Engineer
+        <img src={sce} alt="SimpleKI" className={styles.sce} />
+        <a href="https://zerogasnft.simpleki.de/" target="__blank">
+          ZeroGasNFT von SimpleKI
         </a>
       </div>
       <div className={styles.social}>
@@ -33,7 +33,7 @@ function Footer() {
         <div className={styles.row}>
           <img src={youTube} alt="youtube" className={styles.youTube} />
           <a
-            href="https://www.youtube.com/channel/UCJWh7F3AFyQ_x01VKzr9eyA"
+            href="https://www.youtube.com/c/simpleki"
             target="__blank"
           >
             YouTube
@@ -41,7 +41,7 @@ function Footer() {
         </div>
       </div>
       <div className={styles.row}>
-        Donate
+        Falls du meine Arbeit unterstützen möchtest
         <span role="img" aria-label="smiley">
           🙂
         </span>
@@ -52,14 +52,14 @@ function Footer() {
         </a>
       </div>
       <div className={styles.row}>
-        your ETH will directly go to
-        <a href="https://khanacademy.org" target="__blank" className={styles.khan}>
-          Khan Academy
-        </a>
+        dein Ethereum wird genutzt für Serverkosten uvm.
+        <div className={styles.khan}>
+          Danke
+        </div>
       </div>
       <div className={styles.row}>
-        <a href="mailto:contact@solidity-by-example.org">
-          contact@solidity-by-example.org
+        <a href="mailto:kontakt@lernsolidity.de">
+        kontakt@lernsolidity.de
         </a>
       </div>
       <div className={styles.row}>
@@ -67,14 +67,14 @@ function Footer() {
           href="https://github.com/solidity-by-example/solidity-by-example.github.io"
           target="__blank"
         >
-          source
+          Quellecode
         </a>
         <div className={styles.bar}>|</div>
         <a
           href="https://github.com/solidity-by-example/solidity-by-example.github.io/blob/gh-pages/LICENSE"
           target="__blank"
         >
-          license
+          Lizense
         </a>
       </div>
     </div>

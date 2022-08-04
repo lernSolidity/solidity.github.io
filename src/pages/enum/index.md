@@ -1,26 +1,25 @@
 ---
 title: Enum
 version: 0.8.13
-description: Example of enums in Solidity
+description: Beispiele für den Einsatz von enums in Solidity
 ---
 
-Solidity supports enumerables and they are useful to model choice and keep track of state.
+Solidity unterstützt `enums` bzw. `enumerables` und sie sind nützlich, um einen Zustand zu verfolgen
 
-Enums can be declared outside of a contract.
+`Enums` müssen außerhalb eines Contracts deklariert werden. 
 
 ```solidity
 {{{Enum}}}
 ```
 
-### Declaring and importing Enum
+### Deklarieren und Importieren eines Enum
 
-File that the enum is declared in
+Datei, wo das `Enum` deklariert wird:
 
 ```solidity
 {{{EnumDeclaration}}}
 ```
-
-File that imports the enum above
+Datei, welche das `Enum` importiert:
 
 ```solidity
 {{{EnumImport}}}

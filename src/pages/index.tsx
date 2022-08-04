@@ -15,35 +15,35 @@ const SOL_ROUTES: Route[] = [
   },
   {
     path: "first-app",
-    title: "First App",
+    title: "Deine erste App!",
   },
   {
     path: "primitives",
-    title: "Primitive Data Types",
+    title: "Welche primitiven Data Typen gibt es?",
   },
   {
     path: "variables",
-    title: "Variables",
+    title: "Variablen",
   },
   {
     path: "constants",
-    title: "Constants",
+    title: "Konstanten",
   },
   {
     path: "immutable",
-    title: "Immutable",
+    title: "Was ist veränderbar?",
   },
   {
     path: "state-variables",
-    title: "Reading and Writing to a State Variable",
+    title: "Wie lese oder schreibt man in Zustandsvariablen?",
   },
   {
     path: "ether-units",
-    title: "Ether and Wei",
+    title: "Was ist Ether und Wei?",
   },
   {
     path: "gas",
-    title: "Gas and Gas Price",
+    title: "Was ist Gas und Gas Preis?",
   },
   // Flow control
   {
@@ -52,7 +52,7 @@ const SOL_ROUTES: Route[] = [
   },
   {
     path: "loop",
-    title: "For and While Loop",
+    title: "For und While Loop",
   },
   // collection data types
   {
@@ -74,16 +74,16 @@ const SOL_ROUTES: Route[] = [
   },
   {
     path: "data-locations",
-    title: "Data Locations - Storage, Memory and Calldata",
+    title: "Speicherorte - Was ist Storage, Memory und Calldata?",
   },
   // function
   {
     path: "function",
-    title: "Function",
+    title: "Funktionen",
   },
   {
     path: "view-and-pure-functions",
-    title: "View and Pure Functions",
+    title: "View und Pure Funktionen",
   },
   {
     path: "error",
@@ -91,7 +91,7 @@ const SOL_ROUTES: Route[] = [
   },
   {
     path: "function-modifier",
-    title: "Function Modifier",
+    title: "Funktions Modifier",
   },
   {
     path: "events",
@@ -100,15 +100,15 @@ const SOL_ROUTES: Route[] = [
   // inheritance
   {
     path: "constructor",
-    title: "Constructor",
+    title: "Konstruktur | Constructor",
   },
   {
     path: "inheritance",
-    title: "Inheritance",
+    title: "Vererbung | Inheritance",
   },
   {
     path: "shadowing-inherited-state-variables",
-    title: "Shadowing Inherited State Variables",
+    title: "Schattenvererbung von Zustandsvariablen | Shadowing Inherited State Variables",
   },
   {
     path: "super",
@@ -449,20 +449,28 @@ export default function HomePage() {
   return (
     <div className={styles.component}>
       <SEO
-        title="Solidity by Example | 0.8.13"
-        description="Learn smart contract programming using Solidity"
+        title="Lern Solidity  | 0.8.13"
+        description="Lerne wie man Smart Contracts programmiert in der Programmiersprache Solidity anhand von Beispielen"
       />
       <h1 className={styles.header}>
-        <a href="/">Solidity by Example</a>
+        <a href="/">Lern Solidity Programmierung</a>
       </h1>
-      <div className={styles.subHeader}>v 0.8.13</div>
+      <div className={styles.subHeader}>Solidity Version 0.8.13</div>
       <div className={styles.main}>
         <p>
-          an introduction to <a href="https://solidity.readthedocs.io">Solidity</a> with
-          simple examples
+          Lerne <a href="https://solidity.readthedocs.io">Solidity</a> mit einfach Beispielen. 
+        </p>
+        <p>
+        Die Programmiersprache Solidity ist ein Mix aus Python, C++ oder Javascript. 
+        </p>
+        <p>
+        Diese Seite richtet sich an Programmierer:innen, welche in einen der drei genannten Sprache schon Erfahrungen gesammelt haben. Mithilfe der Beispiele, findest du schnell, wie du eine For-Loop oder sonstiges in deinem Smart Contract implementierst 
+        </p>
+        <p>
+        Wir starten hier aber erstmal klassisch mit HelloWorld. Viel Spass!
         </p>
 
-        <div className={styles.youTube}>
+        {/* <div className={styles.youTube}>
           <img src={youTube} alt="logo" className={styles.youTubeLogo} />
           <a
             href="https://www.youtube.com/channel/UCJWh7F3AFyQ_x01VKzr9eyA"
@@ -470,13 +478,13 @@ export default function HomePage() {
           >
             Most code are explained here
           </a>
-        </div>
+        </div> */}
 
-        <div className={styles.updates}>
+        {/* <div className={styles.updates}>
           {UPDATES.map((text, i) => (
             <div key={i}>{text}</div>
           ))}
-        </div>
+        </div> */}
 
         {ROUTES_BY_CATEGORY.map(({ routes, title }, i) => (
           <div key={i}>

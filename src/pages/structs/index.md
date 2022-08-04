@@ -1,28 +1,31 @@
 ---
 title: Structs
 version: 0.8.13
-description: An example of how to use structs in Solidity
+description: Ein Beispiel wie structs in Solidity verwendet werden können
 ---
 
-You can define your own type by creating a `struct`.
+Mit `struct` können eigene Datentypen anlegt werden.
 
-They are useful for grouping together related data.
+`Struct` sind sinnvoll, wenn primtive Datentypen in einer bestimmten Beziehung stehen.
 
-Structs can be declared outside of a contract and imported in another contract.
+`Struct` können ähnlich wie Enums außerhalb eines Contracts deklariert werden, um sie dann anschließend in seinen eigentlichen Contract zu importieren. 
+
+Trotzdem ist es möglich `structs` innerhalb eines Contracts zu deklarieren und zu verwenden. 
+
 
 ```solidity
 {{{Structs}}}
 ```
 
-### Declaring and importing Struct
+### Deklarieren und Importieren eines Structs
 
-File that the struct is declared in
+Datei, wo das `Struct` deklariert wird:
 
 ```solidity
 {{{StructDeclaration}}}
 ```
 
-File that imports the struct above
+Datei, welche das `Struct` importiert:
 
 ```solidity
 {{{StructImport}}}

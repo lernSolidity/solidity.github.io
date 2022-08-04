@@ -1,18 +1,19 @@
 ---
-title: Variables
+title: Variablen
 version: 0.8.13
-description: Local, state and global variables
+description: Wo ist der unterschied zwischen Local, state und global Variablen?
 ---
 
-There are 3 types of variables in Solidity
+Es gibt 3 verschiedene Typen von Variablen in Solidity:
 
 - **local**
-  - declared inside a function
-  - not stored on the blockchain
+  - Variable wird deklariert innerhalb einer Funktion
+  - Variable wird __nicht__ auf der Blockchain gespeichert
 - **state**
-  - declared outside a function
-  - stored on the blockchain
-- **global** (provides information about the blockchain)
+  - Variable wird deklariert außerhalb einer Funktion
+  - Variable wird auf der Blockchain gespeichert
+- **global** 
+  - Variablen, welche es ermöglichen Informationen über die BLockchain zu erhalten, wie Zeit und Sender der Transaktion
 
 ```solidity
 {{{Variables}}}

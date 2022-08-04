@@ -23,10 +23,10 @@ function Header() {
       </a>
 
       <h3 className={styles.header}>
-        <a href="/">Solidity by Example</a>
+        <a href="/">Lern Solidity Programmierung</a>
 
         <div className={styles.versions}>
-          <div className={styles.version}>version 0.8.13</div>
+          <div className={styles.version}>Solidity Version 0.8.13</div>
         </div>
       </h3>
 

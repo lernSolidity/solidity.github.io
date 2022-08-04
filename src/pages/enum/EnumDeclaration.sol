@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.13;
-// This is saved 'EnumDeclaration.sol'
+// Datei wird abgespeichert mit dem Namen 'EnumDeclaration.sol'
 
 enum Status {
     Pending,
