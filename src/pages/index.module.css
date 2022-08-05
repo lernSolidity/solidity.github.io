@@ -133,13 +133,17 @@
 }
 
 
+/* @property --rotate {
+  syntax: "<angle>";
+  initial-value: 132deg;
+  inherits: false;
+} */
 
-
-.card::before {
+/* .card::before {
   content: "";
   width: 102%;
   height: 102%;
-  border-radius: 8px;
+  border-radius: 45px;
   background-image: linear-gradient(
     var(--rotate)
     , var(--animation-color-first), var(--animation-color-second), var(--animation-color-third));
@@ -149,12 +153,13 @@
     left: -1%;
     -webkit-animation: spin 7.5s linear infinite;
     animation: spin 7.5s linear infinite;
-}
-.cardForImage::before {
+} */
+/* .cardForImage::before {
   content: "";
   width: 100%;
   height: 102%;
   border-radius: 12px;
+
   background-image: linear-gradient(
     var(--rotate)
     , var(--animation-color-first), var(--animation-color-second), var(--animation-color-third));
@@ -164,17 +169,17 @@
     left: 0%;
     animation: spin 7.5s linear infinite;
     -webkit-animation: spin 7.5s linear infinite;
-}
+} */
 
 .card::after {
   position: absolute;
   content: "";
-  top: calc(var(--card-height) /13);
+  top: calc(var(--card-height) /5);
   left: 0;
   right: 0;
   z-index: -1;
-  height: 100%;
-  width: 100%;
+  height: 70%;
+  width: 70%;
   margin: 0 auto;
   -webkit-transform: scale(0.83);
   transform: scale(0.83);
@@ -193,10 +198,12 @@
 
 @keyframes spin {
   0% {
-    --rotate: 0deg;
+    /* --rotate: 0deg; */
+    transform: rotate(0deg);
   }
   100% {
-    --rotate: 360deg;
+    transform: rotate(360deg);
+    /* --rotate: 360deg; */
   }
 }
 @-webkit-keyframes spin { 
