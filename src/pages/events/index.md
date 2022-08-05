@@ -1,13 +1,15 @@
 ---
 title: Events
 version: 0.8.13
-description: Example of how to emit events in Solidity
+description: Beispiel, wie Events in Solidity verwendet werden können
 ---
 
-`Events` allow logging to the Ethereum blockchain. Some use cases for events are:
+`Events` ermöglichen das Loggen von Ereignissen in Solidity. 
 
-- Listening for events and updating user interface
-- A cheap form of storage
+Außerdem werden sie verwendet, um:
+
+- Erwarten von Ereignissen und aktualisieren der Benutzeroberfläche
+- Einfache Form von Speicher
 
 ```solidity
 {{{Events}}}

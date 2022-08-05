@@ -1,16 +1,17 @@
 ---
-title: Calling Other Contract
+title: Aufrufen von anderen Contracts in einem Contract
 version: 0.8.13
-description: In Solidity, contract can call other contracts in several ways
+description: In Solidity, gibt es mehrere Wege, um Funktionen anderer Contracts aufzurufen
 ---
 
-Contract can call other contracts in 2 ways.
+Contracts können auch andere Contracts aufrufen.
 
-The easiest way to is to just call it, like `A.foo(x, y, z)`.
+Die einfachste Möglichkeit ist es, `A.foo(x, y, z)` aufzurufen.
 
-Another way to call other contracts is to use the low-level `call`.
+Eine anderer Weg ist es, einen anderen Contract durch einen low-level `call` aufzurufen.
 
-This method is not recommended.
+Diese Methode wird nicht empfohlen. Außer du weißt, was du tust.
+
 
 ```solidity
 {{{CallingContract}}}

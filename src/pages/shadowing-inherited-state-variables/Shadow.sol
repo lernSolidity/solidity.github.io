@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.13;
 
+
 contract A {
     string public name = "Contract A";
 
@@ -9,17 +10,18 @@ contract A {
     }
 }
 
-// Shadowing is disallowed in Solidity 0.6
-// This will not compile
+
+// Shadowing vererbter Zustandsvariablen ist seit der Version 0.6 in Solidity nicht mehr erlaubt
+// Folgender Code wird nicht kompiliert und es wird eine Exception geworfen:
 // contract B is A {
-//     string public name = "Contract B";
+//     string public name = "Contract B"; <---- Nicht mehr erlaubt
 // }
 
 contract C is A {
-    // This is the correct way to override inherited state variables.
+    // Dies ist die korrekte Möglichkeit, um übergeordneten Statevariablen zu überschreiben.
     constructor() {
         name = "Contract C";
     }
 
-    // C.getName returns "Contract C"
+    // Sofern C.getName aufgerufen wird, wird C.name mit dem Wert "Contract C" ausgegeben.
 }

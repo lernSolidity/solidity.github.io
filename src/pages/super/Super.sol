@@ -1,7 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.13;
 
-/* Inheritance tree
+
+/* Graph der Vererbung
    A
  /  \
 B   C
@@ -10,9 +11,9 @@ B   C
 */
 
 contract A {
-    // This is called an event. You can emit events from your function
-    // and they are logged into the transaction log.
-    // In our case, this will be useful for tracing function calls.
+    // Dies ist ein Event.
+    //  Du kannst Events aus deiner Funktion ausgeben und diese werden in das Protokoll der Transaktion geschrieben.
+    // In unserem Fall wird dies in den Funktionsaufrufen nützlich sein.
     event Log(string message);
 
     function foo() public virtual {
@@ -49,17 +50,19 @@ contract C is A {
 }
 
 contract D is B, C {
-    // Try:
-    // - Call D.foo and check the transaction logs.
-    //   Although D inherits A, B and C, it only called C and then A.
-    // - Call D.bar and check the transaction logs
-    //   D called C, then B, and finally A.
-    //   Although super was called twice (by B and C) it only called A once.
+    // Selbstversuch:
+    // - Rufe D.foo aus und überprüfe die Transaktionsprotokolle.
+    //   Obwohl D vererbt A, B und C, wurde nur C aufgerufen und anschließend dann A aufgerufen.
+
 
     function foo() public override(B, C) {
         super.foo();
     }
 
+    // Selbstversuch:
+    // - Rufe D.bar aus und überprüfe die Transaktionsprotokolle.
+    //   Es wurde zuerst C aufgerufen, dann B, und dann wie im ersten Versuch A.
+    //   Obwohl super wurde zwei Mal aufgerufen (von B und C), wurde es nur A einmal aufgerufen.
     function bar() public override(B, C) {
         super.bar();
     }

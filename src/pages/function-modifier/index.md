@@ -1,16 +1,16 @@
 ---
-title: Function Modifier
+title: Funktions Modifier
 version: 0.8.13
-description: Example of how to write function modifier in Solidity
+description: Beispiel, wie Modifier geschrieben und verwendet werden
 ---
 
-Modifiers are code that can be run before and / or after a function call.
+Modifiers ist Code, welcher vor und / oder nach einem Funktionsaufruf ausgeführt werden kann.
 
-Modifiers can be used to:
+Modifiers können verwendet werden:
 
-- Restrict access
-- Validate inputs
-- Guard against reentrancy hack
+- Zugriff beschränken
+- Eingaben validieren
+- Reentrantes Hack zu verhindern
 
 ```solidity
 {{{FunctionModifier}}}

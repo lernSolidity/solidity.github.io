@@ -1,12 +1,12 @@
 ---
-title: Constructor
+title: Konstruktur 
 version: 0.8.13
-description: Learn how to initialize smart contracts in Solidity using a constructor
+description: Lerne, wie Smart Contracts in Solidity einen Konstruktor initialisieren.
 ---
 
-A `constructor` is an optional function that is executed upon contract creation.
+Ein `constructor` ist eine optionale Funktion, die beim Erstellen/Veröffentlichen eines Contracts auf der Blockchain ausgeführt wird.
 
-Here are examples of how to pass arguments to `constructors`.
+Hier sind Beispiele für die Initialisierung von `constructors`
 
 ```solidity
 {{{Constructor}}}

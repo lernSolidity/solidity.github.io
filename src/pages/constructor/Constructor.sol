@@ -1,16 +1,18 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.13;
 
-// Base contract X
+// Basis contract X
 contract X {
     string public name;
 
+    // Initialisierung des Contracts mit einem Namen
+    // Nach der Veröffentlichung kann der Name nicht mehr verändert werden.
     constructor(string memory _name) {
         name = _name;
     }
 }
 
-// Base contract Y
+// Basis contract Y
 contract Y {
     string public text;
 
@@ -19,24 +21,22 @@ contract Y {
     }
 }
 
-// There are 2 ways to initialize parent contract with parameters.
-
-// Pass the parameters here in the inheritance list.
+// Es gibt 2 Möglichkeiten, einen Parent Contract mit Parametern zu initialisieren.
+// Gebe die Parameter der Vererbungsklasse als Liste an.
 contract B is X("Input to X"), Y("Input to Y") {
 
 }
 
 contract C is X, Y {
-    // Pass the parameters here in the constructor,
-    // similar to function modifiers.
+    // Geben die Parameter der Vererbungsklasse als Liste an im Konstruktor an.
+    // Ähnlich wie bei den Modifier Funktionen.
     constructor(string memory _name, string memory _text) X(_name) Y(_text) {}
 }
 
-// Parent constructors are always called in the order of inheritance
-// regardless of the order of parent contracts listed in the
-// constructor of the child contract.
 
-// Order of constructors called:
+// Die Konstruktoren der Parent-Contracts werden immer in der geschriebenen Reihenfolge der Vererbung aufgerufen.
+
+// Reihenfolge der aufgerufenen Konstruktoren der Vererbungsklassen:
 // 1. X
 // 2. Y
 // 3. D
@@ -44,7 +44,7 @@ contract D is X, Y {
     constructor() X("X was called") Y("Y was called") {}
 }
 
-// Order of constructors called:
+// Reihenfolge der aufgerufenen Konstruktoren der Vererbungsklassen:
 // 1. X
 // 2. Y
 // 3. E

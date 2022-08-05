@@ -1,12 +1,19 @@
 ---
-title: Function
+title: Funktionen
 version: 0.8.13
-description: Example of how to write functions in Solidity
+description: Wie werden Funktionen in Solidity geschrieben?
 ---
 
-There are several ways to return outputs from a function.
+**Was sind Funktionen?**
 
-Public functions cannot accept certain data types as inputs or outputs
+Ein Smart Contract kann `keine`, `eine` oder `mehrere` Funktionen enthalten. Funktionen sind ausführbare hintereinander geschaltete Codezeilen. Man könnte Funktionen auch als in sich gekapselte Codebausteine verstehen. 
+
+Eine Funktion sollte immer nur eine Funktionalität abbilden! Es ist möglich mehrere Funktionalitäten in einer Funktion zu kombinieren, aber durch eine weitumfassende universelle Funktion wird der Code schlechter lesbar und Fehler oder Sicherheitslücken werden dadurch erst möglich.  
+
+**Was braucht die Funktion?**
+
+Eine Funktion ***kann*** Eingabedaten entgegennehmen. Eine Funktion benötigt nicht zwingend oder umbedingt Eingabedaten. Es können Funktionen ohne jegliche Eingaben definiert werden.  
+
 
 ```solidity
 {{{Function}}}

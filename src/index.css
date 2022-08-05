@@ -30,6 +30,10 @@ body.light {
   --code-bg: #f5f5f5;
   --link-color: #261a3b;
   --shadow-color: rgba(0, 0, 0, 0.2);
+
+  --animation-color-first: #b3ff5d;
+  --animation-color-second: #3ce38f 43%;
+  --animation-color-third: #00c2bf;
 }
 body.dark {
   --bg-color: #161b22;
@@ -37,6 +41,9 @@ body.dark {
   --code-bg: #0d1117;
   --link-color: #f6f6f6;
   --shadow-color: rgba(255, 255, 255, 0.1);
+  --animation-color-first: #5ddcff;
+  --animation-color-second: #3c67e3 43%;
+  --animation-color-third: #4e00c2;
 }
 pre {
   padding: 15px;

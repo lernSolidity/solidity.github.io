@@ -1,25 +1,25 @@
 ---
 title: Error
 version: 0.8.13
-description: Example of how to throw errors in Solidity
+description: Beispiel, wie Error in Solidity funktionieren 
 ---
 
-An error will undo all changes made to the state during a transaction.
+Sofern ein Fehler auftritt, dann werden alle Änderungen an dem Status des Contracts rückgängig gemacht.
 
-You can throw an error by calling `require`, `revert` or `assert`.
+Du kannst einen Fehler mit `require`, `revert` oder `assert` selbst auslösen.
 
-- `require` is used to validate inputs and conditions before execution.
-- `revert` is similar to `require`. See the code below for details.
-- `assert` is used to check for code that should never be false. Failing
-  assertion probably means that there is a bug.
+- `require` wird verwendet, um Eingaben und Bedingungen zu validieren, bevor die Funktion vollständig ausgeführt wird.
+- `revert` ist ähnlich `require`. Weitere Informationen findest du unten im Code.
+- `assert` wird verwendet, um Code zu überprüfen, welcher niemals `false` sein darf. Falls der Assertion-Fehler auftritt, ist es möglicherweise ein Fehler in den Eingabedaten.
 
-Use custom error to save gas.
+Verwende benutzerdefinierte Fehlermeldung, um Gas zu sparen.
+
 
 ```solidity
 {{{Error}}}
 ```
 
-Here is another example
+Hier ein weiteres Beispiel:
 
 ```solidity
 {{{Account}}}

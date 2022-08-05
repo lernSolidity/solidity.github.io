@@ -108,7 +108,7 @@ const SOL_ROUTES: Route[] = [
   },
   {
     path: "shadowing-inherited-state-variables",
-    title: "Schattenvererbung von Zustandsvariablen | Shadowing Inherited State Variables",
+    title: "Shadowing vererbter Zustandsvariablen",
   },
   {
     path: "super",
@@ -456,7 +456,7 @@ export default function HomePage() {
         <a href="/">Lern Solidity Programmierung</a>
       </h1>
       <div className={styles.subHeader}>Solidity Version 0.8.13</div>
-      <div className={styles.intro}>
+      <div className={styles.card}>
 
         <p>
           Lerne <a href="https://solidity.readthedocs.io">Solidity</a> mit einfach Beispielen. 

@@ -1,30 +1,28 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.13;
 
+
 contract FunctionModifier {
-    // We will use these variables to demonstrate how to use
-    // modifiers.
+    // Wir verwenden diese Variablen um zu zeigen, wie modifiers verwendet werden.
     address public owner;
     uint public x = 10;
     bool public locked;
 
     constructor() {
-        // Set the transaction sender as the owner of the contract.
+        // Setze den Sender des Transaktions als Besitzer des Contracts.
         owner = msg.sender;
     }
 
-    // Modifier to check that the caller is the owner of
-    // the contract.
+    // Modifier checken, ob der Aufrufer der Besitzer des Contracts ist.
     modifier onlyOwner() {
         require(msg.sender == owner, "Not owner");
-        // Underscore is a special character only used inside
-        // a function modifier and it tells Solidity to
-        // execute the rest of the code.
+        // Unterstrich ist ein speziales Zeichen, das nur innerhalb einer Funktion verwendet wird.
+        // Es dient dazu, dass Solidity den Rest des Codes ausführt.
         _;
     }
 
-    // Modifiers can take inputs. This modifier checks that the
-    // address passed in is not the zero address.
+    // Modifiers können Eingabedaten akzeptieren. Dieser Modifier überprüft, ob die Adresse
+    // nicht der Zero-Adresse (0x000000..00) entspricht.
     modifier validAddress(address _addr) {
         require(_addr != address(0), "Not valid address");
         _;
@@ -34,9 +32,9 @@ contract FunctionModifier {
         owner = _newOwner;
     }
 
-    // Modifiers can be called before and / or after a function.
-    // This modifier prevents a function from being called while
-    // it is still executing.
+    // Modifiers können vor und nach einer Funktion aufgerufen werden.
+    // Dieser Modifier verhindert, dass eine Funktion ausgeführt wird,
+    // während sie noch ausgeführt wird.
     modifier noReentrancy() {
         require(!locked, "No reentrancy");
 

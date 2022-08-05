@@ -2,7 +2,7 @@
 pragma solidity ^0.8.13;
 
 contract Function {
-    // Functions can return multiple values.
+    // Funktionen können mehrere Datentypen zurückgeben
     function returnMany()
         public
         pure
@@ -15,7 +15,7 @@ contract Function {
         return (1, true, 2);
     }
 
-    // Return values can be named.
+    // Rückgabewerte können benannt werden
     function named()
         public
         pure
@@ -28,8 +28,8 @@ contract Function {
         return (1, true, 2);
     }
 
-    // Return values can be assigned to their name.
-    // In this case the return statement can be omitted.
+    // Rückgabewerte können bei der Definition der Funktion benannt werden.
+    // In diesem Fall ist es nicht umbedingt notwendig das return-Statement anzugeben.
     function assigned()
         public
         pure
@@ -44,8 +44,9 @@ contract Function {
         y = 2;
     }
 
-    // Use destructuring assignment when calling another
-    // function that returns multiple values.
+    
+    // Verwende das Destrukturierungs-Zuweisung wenn eine andere Funktion aufgerufen wird.
+    // Funktionen können mehrere Datentypen zurückgeben.
     function destructuringAssignments()
         public
         pure
@@ -59,18 +60,17 @@ contract Function {
     {
         (uint i, bool b, uint j) = returnMany();
 
-        // Values can be left out.
+        // Werte können auch ausgelassen werden.
         (uint x, , uint y) = (4, 5, 6);
 
         return (i, b, j, x, y);
     }
 
-    // Cannot use map for either input or output
-
-    // Can use array for input
+    // Ein Mapping kann nicht verwendet werden, sei es als Input oder als Output einer Funktion.
+    // Ein Array kann verwendet werden als Input einer Funktion.
     function arrayInput(uint[] memory _arr) public {}
 
-    // Can use array for output
+    // Ein Array kann verwendet werden als Output einer Funktion.
     uint[] public arr;
 
     function arrayOutput() public view returns (uint[] memory) {

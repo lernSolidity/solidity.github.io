@@ -10,13 +10,13 @@ contract DataLocations {
     mapping(uint => MyStruct) myStructs;
 
     function f() public {
-        // call _f with state variables
-        
+
+        // Aufruf der Funktion _f mit den State Variablen als Input
         _f(arr, map, myStructs[1]);
 
-        // get a struct from a mapping
+        // Speicher das myStructs Element in storage
         MyStruct storage myStruct = myStructs[1];
-        // create a struct in memory
+        // speicher das Mystruct Element in memory  
         MyStruct memory myMemStruct = MyStruct(0);
     }
 
@@ -25,15 +25,16 @@ contract DataLocations {
         mapping(uint => address) storage _map,
         MyStruct storage _myStruct
     ) internal {
-        // do something with storage variables
+        // mach was mit den storage-Variablen
     }
 
-    // You can return memory variables
+    // Zurückgeben von memory Variablen
     function g(uint[] memory _arr) public returns (uint[] memory) {
-        // do something with memory array
+        // mach was mit den array in memory
     }
 
     function h(uint[] calldata _arr) external {
-        // do something with calldata array
+        // mach was mit den calldata array 
     }
 }
+

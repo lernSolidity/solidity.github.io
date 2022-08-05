@@ -3,6 +3,8 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  /* margin-top: 1rem; */
+  padding: 2rem;
 }
 .component a {
   text-decoration: none;
@@ -13,12 +15,12 @@
 .light {
   width: 30px;
   cursor: pointer;
-  margin: 0 20px 0 20px;
+  margin: 0 1rem 1rem 1rem;
 }
 .dark {
   width: 30px;
   cursor: pointer;
-  margin: 0 20px 0 20px;
+  margin: 0 1rem 1rem 1rem;
 }
 .header {
   margin: 0;

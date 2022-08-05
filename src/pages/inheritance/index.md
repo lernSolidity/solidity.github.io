@@ -1,18 +1,19 @@
 ---
-title: Inheritance
+title: Vererbung | Inheritance
 version: 0.8.13
-description: Example of inheritance in Solidity
+description: Beispeiel für Vererbung in Solidity
 ---
 
-Solidity supports multiple inheritance. Contracts can inherit other contract by using the `is` keyword.
+Solidity unterstützt mehrfach Vererbung. Contracts können von anderen Contracts erben, wenn das `is`-Schlüsselwort verwendet wird.
 
-Function that is going to be overridden by a child contract must be declared as `virtual`.
+Funktionen die von einem Kind-Contract überschrieben werden müssen als `virtual` deklariiert werden.
 
-Function that is going to override a parent function must use the keyword `override`.
+Funktionen die von einem übergeordneten Contract überschrieben werden müssen mit dem Schlüsselwort `override` deklariiert werden.
 
-Order of inheritance is important.
+Die Reihenfolge der Vererbung ist wichtig.
 
-You have to list the parent contracts in the order from “most base-like” to “most derived”.
+Die Vererbungs-Contracts müssen in der Reihenfolge von “am häufigsten basiert” bis “am häufigsten abgeleitet” aufgeführt werden.
+
 
 ```solidity
 {{{Inheritance}}}

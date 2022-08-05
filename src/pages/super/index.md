@@ -1,12 +1,12 @@
 ---
 title: Calling Parent Contracts
 version: 0.8.13
-description: An example of calling parent contracts in Solidity
+description: Ein Beispiel, wie Funktionen eines Parent-Contracts aufgerufen werden in Solidity
 ---
 
-Parent contracts can be called directly, or by using the keyword `super`.
+Parent contracts können direkt aufgerufen werden, oder durch Verwendung des Schlüssels `super`.
 
-By using the keyword `super`, all of the immediate parent contracts will be called.
+Wenn das Keyword `super` verwendet wird, werden alle direkten Elternkontrakte aufgerufen.
 
 ```solidity
 {{{Super}}}

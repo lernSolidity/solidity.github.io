@@ -42,9 +42,9 @@ function Footer() {
       </div>
       <div className={styles.row}>
         Falls du meine Arbeit unterstützen möchtest
-        <span role="img" aria-label="smiley">
+        {/* <span role="img" aria-label="smiley"> */}
           🙂
-        </span>
+        {/* </span> */}
       </div>
       <div className={styles.row}>
         <a href={`https://etherscan.io/address/${ADDRESS}`} target="__blank">
@@ -52,10 +52,10 @@ function Footer() {
         </a>
       </div>
       <div className={styles.row}>
-        dein Ethereum wird genutzt für Serverkosten uvm.
-        <div className={styles.khan}>
+        dein Ethereum Spende wird genutzt für Serverkosten uvm.
+      </div>
+      <div className={styles.row}>
           Danke
-        </div>
       </div>
       <div className={styles.row}>
         <a href="mailto:kontakt@lernsolidity.de">
