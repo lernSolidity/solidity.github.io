@@ -1,19 +1,19 @@
 ---
 title: Visibility
 version: 0.8.13
-description: An example of external, internal, private and public functions in Solidity
+description: Ein Beispiel für external, internal, private und public Funktionen in Solidity
 ---
 
-Functions and state variables have to declare whether they are accessible by other contracts.
+Funktionen und Variablen müssen angeben, ob sie von anderen Contracts ausgelesen werden dürfen.
 
-Functions can be declared as
+Funktionen und Zustandsvariablen können deklariert werden als:
 
-- `public` - any contract and account can call
-- `private` - only inside the contract that defines the function
-- `internal`- only inside contract that inherits an `internal` function
-- `external` - only other contracts and accounts can call
+- `public` - jeder Ethereum Wallet/Account/Adresse und / oder Contract kann diese Funktion aufrufen
+- `private` - nur innerhalb des Contracts, das die Funktion beinhaltet, kann diese Funktion aufrufen
+- `internal` - nur innerhalb des Contracts, das eine `internal` Funktion vererbt werden
+- `external` - nur andere Contracts und Ethereum Wallet/Account/Adresse können diese Funktion aufrufen
 
-State variables can be declared as `public`, `private`, or `internal` but not `external`.
+Zustandsvariablen können als `public`, `private`, oder `internal` deklariert werden, nicht `external`.
 
 ```solidity
 {{{Visibility}}}

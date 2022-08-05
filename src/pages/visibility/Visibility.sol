@@ -1,10 +1,37 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.13;
 
+// An example of external, internal, private and public functions in Solidity
+
+// Functions and state variables have to declare whether they are accessible by other contracts.
+
+// Functions can be declared as
+
+// - `public` - any contract and account can call
+// - `private` - only inside the contract that defines the function
+// - `internal`- only inside contract that inherits an `internal` function
+// - `external` - only other contracts and accounts can call
+
+// State variables can be declared as `public`, `private`, or `internal` but not `external`.
+
+
+Ein Beispiel für externe, interne, private und öffentliche Funktionen in Solidity
+
+Funktionen und Variablen müssen angeben, ob sie von anderen Contracts ausgelesen werden dürfen.
+
+Funktionen und Zustandsvariablen können deklariert werden als:
+
+- `public` - jeder Ethereum Wallet/Account/Adresse und / oder Contract kann diese Funktion aufrufen
+- `private` - nur innerhalb des Contracts, das die Funktion beinhaltet, kann diese Funktion aufrufen
+- `internal` - nur innerhalb des Contracts, das eine `internal` Funktion vererbt werden
+- `external` - nur andere Contracts und Ethereum Wallet/Account/Adresse können diese Funktion aufrufen
+
+Zustandsvariablen können als `public`, `private`, oder `internal` deklariert werden, nicht `external`.
+
+
 contract Base {
-    // Private function can only be called
-    // - inside this contract
-    // Contracts that inherit this contract cannot call this function.
+    // Private Funktionen können nur in diesem Contract aufgerufen werden.
+    // Contracts die dieses Contract erben können nicht diese Funktion aufrufen.
     function privateFunc() private pure returns (string memory) {
         return "private function called";
     }
@@ -13,9 +40,9 @@ contract Base {
         return privateFunc();
     }
 
-    // Internal function can be called
-    // - inside this contract
-    // - inside contracts that inherit this contract
+    // Interne Funktionen können aufgerufen werden
+    // - in diesem Contract
+    // - in contracts, die dieses Contract erben
     function internalFunc() internal pure returns (string memory) {
         return "internal function called";
     }
@@ -24,42 +51,44 @@ contract Base {
         return internalFunc();
     }
 
-    // Public functions can be called
-    // - inside this contract
-    // - inside contracts that inherit this contract
-    // - by other contracts and accounts
+    // ÖFfentlich können Funktionen aufgerufen werden:
+    // - in diesem Contract
+    // - in contracts, die dieses Contract erben
+    // - von anderen Contracts und Accounts
     function publicFunc() public pure returns (string memory) {
         return "public function called";
     }
 
-    // External functions can only be called
-    // - by other contracts and accounts
+    // Externer Funktionen können aufgerufen werden:
+    // - in diesem Contract
     function externalFunc() external pure returns (string memory) {
         return "external function called";
     }
 
     // This function will not compile since we're trying to call
     // an external function here.
+    // Diese Funktion wird nicht kompiliert, weil wir versuchen, eine externe Funktion aufzurufen.
     // function testExternalFunc() public pure returns (string memory) {
     //     return externalFunc();
     // }
 
-    // State variables
-    string private privateVar = "my private variable";
-    string internal internalVar = "my internal variable";
-    string public publicVar = "my public variable";
-    // State variables cannot be external so this code won't compile.
-    // string external externalVar = "my external variable";
+    // Zustands Variablen
+    string private privateVar = "meine private Variable";
+    string internal internalVar = "meine internal Variable";
+    string public publicVar = "meine public Variable";
+
+    // Zustandsvariablen können nicht extern sein, daher wird diese Anweisung nicht kompiliert.
+    // string external externalVar = "meine external Variable";
 }
 
 contract Child is Base {
-    // Inherited contracts do not have access to private functions
-    // and state variables.
+    // Vererbte Contracts haben keine Zugriff auf private Funktionen und Zustandsvariablen.
     // function testPrivateFunc() public pure returns (string memory) {
     //     return privateFunc();
     // }
 
-    // Internal function call be called inside child contracts.
+
+    // Interner Funktionsaufruf kann innerhalb eines Kindkontracts aufgerufen werden.
     function testInternalFunc() public pure override returns (string memory) {
         return internalFunc();
     }
