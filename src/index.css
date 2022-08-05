@@ -29,12 +29,14 @@ body.light {
   --color: #252519;
   --code-bg: #f5f5f5;
   --link-color: #261a3b;
+  --shadow-color: rgba(0, 0, 0, 0.2);
 }
 body.dark {
   --bg-color: #161b22;
   --color: rgb(201, 209, 217);
   --code-bg: #0d1117;
   --link-color: #f6f6f6;
+  --shadow-color: rgba(255, 255, 255, 0.1);
 }
 pre {
   padding: 15px;
@@ -193,10 +195,10 @@ body.dark .hljs-variable.language_ {
   color: #ff7b72;
 }
 
-body.dak .hljs-title,
-body.dak .hljs-title.class_,
-body.dak .hljs-title.class_.inherited__,
-body.dak .hljs-title.function_ {
+body.dark .hljs-title,
+body.dark .hljs-title.class_,
+body.dark .hljs-title.class_.inherited__,
+body.dark .hljs-title.function_ {
   color: #d2a8ff;
 }
 
@@ -268,6 +270,10 @@ body.dark .hljs-addition {
 body.dark .hljs-deletion {
   color: #ffdcd7;
   background-color: #67060c;
+}
+
+body.dark .intro {
+  background-color: #033a16;
 }
 
 body.dark .hljs-char.escape_,

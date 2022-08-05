@@ -456,7 +456,8 @@ export default function HomePage() {
         <a href="/">Lern Solidity Programmierung</a>
       </h1>
       <div className={styles.subHeader}>Solidity Version 0.8.13</div>
-      <div className={styles.main}>
+      <div className={styles.intro}>
+
         <p>
           Lerne <a href="https://solidity.readthedocs.io">Solidity</a> mit einfach Beispielen. 
         </p>
@@ -464,12 +465,15 @@ export default function HomePage() {
         Die Programmiersprache Solidity ist ein Mix aus Python, C++ oder Javascript. 
         </p>
         <p>
-        Diese Seite richtet sich an Programmierer:innen, welche in einen der drei genannten Sprache schon Erfahrungen gesammelt haben. Mithilfe der Beispiele, findest du schnell, wie du eine For-Loop oder sonstiges in deinem Smart Contract implementierst 
+        Diese Seite richtet sich an Programmierer:innen, welche in einen der drei genannten Sprache schon Erfahrungen gesammelt haben.
         </p>
+        <p> Mithilfe der Beispiele, findest du schnell, wie du eine For-Loop oder sonstiges in deinem Smart Contract implementierst </p>
         <p>
-        Wir starten hier aber erstmal klassisch mit HelloWorld. Viel Spass!
+        Wir starten hier aber erstmal klassisch mit HelloWorld. 
         </p>
-
+        <p>Viel Spass!</p>
+      </div>
+      <div className={styles.main}>
         {/* <div className={styles.youTube}>
           <img src={youTube} alt="logo" className={styles.youTubeLogo} />
           <a

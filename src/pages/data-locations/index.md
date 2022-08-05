@@ -1,15 +1,14 @@
 ---
-title: Data Locations - Storage, Memory and Calldata
+title: Speicherorte - Was ist Storage, Memory und Calldata?
 version: 0.8.13
-description: Data locations - storage, memory and calldata
+description: Speicherorte - Was ist Storage, Memory und Calldata? >
 ---
 
-Variables are declared as either `storage`, `memory` or `calldata` to explicitly
-specify the location of the data.
+Variablen werden entweder deklariert als  `storage`, `memory` oder `calldata`, um explizit den Speicherort einer Variable zu definieren.
 
-- `storage` - variable is a state variable (store on blockchain)
-- `memory` - variable is in memory and it exists while a function is being called
-- `calldata` - special data location that contains function arguments
+- `storage` - Variable ist eine Zustandsvariable (gespeichert auf der Blockchain)
+- `memory` - Variable ist in `memory` und exsistiert nur solange eine Funktion ausgeführt wird
+- `calldata` - Spezielle Speicherort, welcher genutzt wird für Eingabedaten einer Funktion 
 
 ```solidity
 {{{DataLocations}}}
