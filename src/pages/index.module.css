@@ -147,6 +147,7 @@
     z-index: -1;
     top: -1%;
     left: -1%;
+    -webkit-animation: spin 7.5s linear infinite;
     animation: spin 7.5s linear infinite;
 }
 .cardForImage::before {
@@ -162,6 +163,7 @@
     top: -1.5%;
     left: 0%;
     animation: spin 7.5s linear infinite;
+    -webkit-animation: spin 7.5s linear infinite;
 }
 
 .card::after {
@@ -174,13 +176,18 @@
   height: 100%;
   width: 100%;
   margin: 0 auto;
+  -webkit-transform: scale(0.83);
   transform: scale(0.83);
+  filter: blur(calc(var(--card-height) / 6));
+  -webkit-filter: blur(calc(var(--card-height) / 6));
   filter: blur(calc(var(--card-height) / 6));
   background-image: linear-gradient(
     var(--rotate)
     , var(--animation-color-first), var(--animation-color-second), var(--animation-color-third));
     opacity: 1;
+  -webkit-transition: opacity .5s;
   transition: opacity .5s;
+  -webkit-animation: spin 7.5s linear infinite;
   animation: spin 7.5s linear infinite;
 }
 
@@ -192,6 +199,16 @@
     --rotate: 360deg;
   }
 }
+@-webkit-keyframes spin { 
+  0% {
+  -webkit-rotate: 0deg;
+  --rotate: 0deg;
+  } 
+  100% {
+  -webkit-rotate: 360deg;
+  --rotate: 360deg;
+  } 
+} 
 
 .img {
   width: min(100vw - 100px, 1000px);
