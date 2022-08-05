@@ -212,7 +212,7 @@
 @media only screen and (max-width: 720px) {
   .cardForImage p {
     font-size: small;
-    left:1.5rem;
+    left:1.5rem; 
   }
 } 
 @media only screen and (max-width: 500px) {
