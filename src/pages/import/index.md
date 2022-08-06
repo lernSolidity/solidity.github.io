@@ -1,14 +1,15 @@
 ---
-title: Import
+title: Importiere externe Dateien
 version: 0.8.13
-description: Learn how to import other Solidity files
+description: Wie werden Dateien importiert in Solidity? 
 ---
 
 You can import local and external files in Solidity.
+Du kannst lokale als auch externe Dateien in Solidity importieren:
 
-### Local
+### Lokal
 
-Here is our folder structure.
+Hier ist unsere Ordnerstruktur
 
 ```
 ├── Import.sol
@@ -27,15 +28,15 @@ Import.sol
 {{{Import}}}
 ```
 
-### External
+### Importieren einer externen Datei
 
-You can also import from [GitHub](https://github.com) by simply copying the url
+Du kannst ebenfalls von [GitHub](https://github.com) importieren. Man muss nur eine valide URL eines Contracts angeben.
 
 ```solidity
 // https://github.com/owner/repo/blob/branch/path/to/Contract.sol
 import "https://github.com/owner/repo/blob/branch/path/to/Contract.sol";
 
-// Example import ECDSA.sol from openzeppelin-contract repo, release-v4.5 branch
+// Bespiel: Importieren des ECDSA.sol Contracts von Openzepplins Repository mit der Version/Branch release-v4.5
 // https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v4.5/contracts/utils/cryptography/ECDSA.sol
 import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v4.5/contracts/utils/cryptography/ECDSA.sol";
 

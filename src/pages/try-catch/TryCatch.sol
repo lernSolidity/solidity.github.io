@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.13;
 
-// External contract used for try / catch examples
+// Externer Contract für die try / catch Beispiele
 contract Foo {
     address public owner;
 
@@ -24,13 +24,13 @@ contract Bar {
     Foo public foo;
 
     constructor() {
-        // This Foo contract is used for example of try catch with external call
+        // Foo Contract wird erstellt
         foo = new Foo(msg.sender);
     }
 
-    // Example of try / catch with external call
-    // tryCatchExternalCall(0) => Log("external call failed")
-    // tryCatchExternalCall(1) => Log("my func was called")
+    // Bespiel für try / catch mit externer Call
+    // tryCatchExternalCall(0) => Log("externer call fehlgeschlagen")
+    // tryCatchExternalCall(1) => Log("myFunc wurde aufgerufen")
     function tryCatchExternalCall(uint _i) public {
         try foo.myFunc(_i) returns (string memory result) {
             emit Log(result);
@@ -39,19 +39,19 @@ contract Bar {
         }
     }
 
-    // Example of try / catch with contract creation
-    // tryCatchNewContract(0x0000000000000000000000000000000000000000) => Log("invalid address")
-    // tryCatchNewContract(0x0000000000000000000000000000000000000001) => LogBytes("")
-    // tryCatchNewContract(0x0000000000000000000000000000000000000002) => Log("Foo created")
+    // Bespiel für try / catch mit Contract Creation
+    // tryCatchNewContract(0x0000000000000000000000000000000000000003) => Log("invalide adresse")
+    // tryCatchNewContract(0x0000000000000000000000000000000000000004) => LogBytes("")
+    // tryCatchNewContract(0x0000000000000000000000000000000000000005) => Log("Foo erstellt")
     function tryCatchNewContract(address _owner) public {
         try new Foo(_owner) returns (Foo foo) {
-            // you can use variable foo here
+            // foo kann hier als Variable verwendet werden
             emit Log("Foo created");
         } catch Error(string memory reason) {
-            // catch failing revert() and require()
+            // catch eines fehlgeschlagenen Aufrufs von revert() und require() mit einer nicht definierten Error-Message
             emit Log(reason);
         } catch (bytes memory reason) {
-            // catch failing assert()
+            // catch eines fehlgeschlagenen Aufrufs von assert()mit einer nicht definierten Error-Message
             emit LogBytes(reason);
         }
     }

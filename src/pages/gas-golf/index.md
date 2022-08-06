@@ -1,16 +1,16 @@
 ---
-title: Gas Saving Techniques
+title: Spare Gas für den User
 version: 0.8.13
-description: Some gas saving techniques
+description: Wie optimiere ich Gas in Solidity?
 ---
 
-Some gas saving techniques.
+Ein paar Techniken, wie du dem Nutzer deines Smart Contracts Gaskosten ersparen kannst
 
-- Replacing `memory` with `calldata`
-- Loading state variable to memory
-- Replace for loop `i++` with `++i`
-- Caching array elements
-- Short circuit
+- `memory` in den Eingabedaten einer Funktion durch `calldata` ersetzen
+- Laden der Zustandsvariablen in memory 
+- `i++` mit `++i` ersetzen in for loops
+- Cachen der Array-Elemente
+- Kürzeren Loop Schleifen
 
 ```solidity
 {{{GasGolf}}}

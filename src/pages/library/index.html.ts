@@ -1,13 +1,12 @@
 // metadata
 export const version = "0.8.13"
 export const title = "Library"
-export const description =
-  "Example of how to write and use libraries in your Solidity code"
+export const description = "Was ist eine Library und wie werden sie verwendet in deinem Solidity code?"
 
-const html = `<p>Libraries are similar to contracts, but you can&#39;t declare any state variable and
-you can&#39;t send ether.</p>
-<p>A library is embedded into the contract if all library functions are internal.</p>
-<p>Otherwise the library must be deployed and then linked before the contract is deployed.</p>
+const html = `<p>Libraries sind ähnlich zu Contracts, aber diese können keine statische Variablen und auch keine Ether senden.</p>
+<p>Eine Library ist "eingebettet" in den Contract, sofern alle Library Funktionen intern sind.</p>
+<p>Ein direktes Aufrufen der Library von externen Quellen ist somit nicht möglich.</p>
+<p>Andernfalls muss die Library zuerst bereitgestellt/veröffentlich werden und anschließend vom Contract initialisiert werden als externer Contract.</p>
 <pre><code class="language-solidity"><span class="hljs-comment">// SPDX-License-Identifier: MIT</span>
 <span class="hljs-meta"><span class="hljs-keyword">pragma</span> <span class="hljs-keyword">solidity</span> ^0.8.13;</span>
 
@@ -32,7 +31,7 @@ you can&#39;t send ether.</p>
         } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (y <span class="hljs-operator">!</span><span class="hljs-operator">=</span> <span class="hljs-number">0</span>) {
             z <span class="hljs-operator">=</span> <span class="hljs-number">1</span>;
         }
-        <span class="hljs-comment">// else z = 0 (default value)</span>
+        <span class="hljs-comment">// else z = 0 (default Wert)</span>
     }
 }
 
@@ -50,8 +49,8 @@ you can&#39;t send ether.</p>
     }
 }
 
-<span class="hljs-comment">// Array function to delete element at index and re-organize the array</span>
-<span class="hljs-comment">// so that their are no gaps between the elements.</span>
+<span class="hljs-comment">// Array Funktion ist eine Funktion, die ein Element in einem Array löscht und das Array neu ordnet,</span>
+<span class="hljs-comment">// sodass keine Lücke mehr vorhanden sind bzw. die Länge des Arrays nach der Löschoperation reduziert wird.</span>
 <span class="hljs-class"><span class="hljs-keyword">library</span> <span class="hljs-title">Array</span> </span>{
     <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">remove</span>(<span class="hljs-params"><span class="hljs-keyword">uint</span>[] <span class="hljs-keyword">storage</span> arr, <span class="hljs-keyword">uint</span> index</span>) <span class="hljs-title"><span class="hljs-keyword">public</span></span> </span>{
         <span class="hljs-comment">// Move the last element into the place to delete</span>

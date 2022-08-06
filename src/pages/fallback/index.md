@@ -1,17 +1,16 @@
 ---
 title: Fallback
 version: 0.8.13
-description: Example of how to use fallback in Solidity
+description: Beispiel, wie die `fallback`-Funktion verwendet wird in Solidity
 ---
 
-`fallback` is a function that does not take any arguments and does not return anything.
+`fallback` ist eine Funktion, die keine Argumente nimmt und keine Rückgabewerte gibt.
 
-It is executed either when
+Die `fallback` Funktion wird ausgeführt, wenn
+- eine Funktion, die nicht existiert ist aufgerufen wird oder
+- Ether direkt an ein Contract gesendet wird, aber `receive()` nicht existiert oder `msg.data` nicht leer ist.
 
-- a function that does not exist is called or
-- Ether is sent directly to a contract but `receive()` does not exist or `msg.data` is not empty
-
-`fallback` has a 2300 gas limit when called by `transfer` or `send`.
+`fallback` hat eine 2300-Gas-Limit, wenn es bei einer `transfer` oder `send` Transkation aufgerufen wird.
 
 ```solidity
 {{{Fallback}}}

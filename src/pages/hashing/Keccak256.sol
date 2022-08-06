@@ -10,9 +10,9 @@ contract HashFunction {
         return keccak256(abi.encodePacked(_text, _num, _addr));
     }
 
-    // Example of hash collision
-    // Hash collision can occur when you pass more than one dynamic data type
-    // to abi.encodePacked. In such case, you should use abi.encode instead.
+    // Beispiel für eine Hash-Kollision:
+    // Eine Hash-Kollision kann auftreten, wenn mehr als ein dynamischer Datentyp
+    // an abi.encodePacked übergeben wird. In diesem Fall sollten abi.encode verwendet werden.
     function collision(string memory _text, string memory _anotherText)
         public
         pure
@@ -28,7 +28,7 @@ contract GuessTheMagicWord {
     bytes32 public answer =
         0x60298f78cc0b47170ba79c10aa3851d7648bd96f2f8e46a19dbc777c36fb0c00;
 
-    // Magic word is "Solidity"
+    // Magisches Wort ist "Solidity" ;)
     function guess(string memory _word) public view returns (bool) {
         return keccak256(abi.encodePacked(_word)) == answer;
     }

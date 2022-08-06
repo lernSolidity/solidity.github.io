@@ -1,16 +1,17 @@
 // metadata
 export const version = "0.8.13"
-export const title = "Function Selector"
+export const title = "Funktions-Selector"
 export const description = "Example of how function selectors are computed"
 
-const html = `<p>When a function is called, the first 4 bytes of <code>calldata</code> specifies which function to call.</p>
-<p>This 4 bytes is called a function selector.</p>
-<p>Take for example, this code below. It uses <code>call</code> to execute <code>transfer</code> on a contract at the address <code>addr</code>.</p>
+const html = `<p>Wenn eine Funktion aufgerufen wird, dann geben die ersten 4 Bytes von <code>calldata</code> an, welche Funktion aufgerufen werden soll.
+Diese 4 bytes nennen wir Funktions-Selector.
+Schau dir das untere Bespiel an. Es verwendet <code>call</code> um die Funktion <code>transfer</code> in einem Contract auszuführen, mit der Adresse <code>addr</code> als Eingabedaten.</p>
 <pre><code class="language-solidity">addr.<span class="hljs-built_in">call</span>(<span class="hljs-built_in">abi</span>.<span class="hljs-built_in">encodeWithSignature</span>(<span class="hljs-string">"transfer(address,uint256)"</span>, 0xSomeAddress, <span class="hljs-number">123</span>))
 </code></pre>
-<p>The first 4 bytes returned from <code>abi.encodeWithSignature(....)</code> is the function selector.</p>
-<p>Perhaps you can save a tiny amount of gas if you precompute and inline the function selector in your code?</p>
-<p>Here is how the function selector is computed.</p>
+<p>Die ersten 4 Bytes werden zurückgegeben von <code>abi.encodeWithSignature(....)</code>.
+Es handelt sich um den Funktions-Selector.
+Potenziell kann Gas eingespart werden, wenn der Funktions-Selector vorher berechnest und fest reingeschrieben wird.</p>
+<p>Hier ist wie der Funktions-Selector berechnet wird.</p>
 <pre><code class="language-solidity"><span class="hljs-comment">// SPDX-License-Identifier: MIT</span>
 <span class="hljs-meta"><span class="hljs-keyword">pragma</span> <span class="hljs-keyword">solidity</span> ^0.8.13;</span>
 

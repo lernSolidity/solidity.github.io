@@ -3,25 +3,25 @@ pragma solidity ^0.8.13;
 
 contract ReceiveEther {
     /*
-    Which function is called, fallback() or receive()?
+    Welche Funktion wird aufgerufen, fallback() oder receive()?
 
            send Ether
                |
-         msg.data is empty?
-              / \
-            yes  no
-            /     \
-receive() exists?  fallback()
+         ist msg.data leer?
+              /        \
+            ja         nein
+            /            \
+exisitiert receive()?   fallback()
          /   \
-        yes   no
+        ja   nein
         /      \
     receive()   fallback()
     */
 
-    // Function to receive Ether. msg.data must be empty
+    // Funktion um Ether zu empfangen. msg.data muss leer sein
     receive() external payable {}
 
-    // Fallback function is called when msg.data is not empty
+    // Fallback Funktion wird aufgerufen, wenn msg.data nicht leer ist
     fallback() external payable {}
 
     function getBalance() public view returns (uint) {
@@ -31,20 +31,20 @@ receive() exists?  fallback()
 
 contract SendEther {
     function sendViaTransfer(address payable _to) public payable {
-        // This function is no longer recommended for sending Ether.
+        // Diese Funktion wird nicht mehr empfohlen, um Ether zu senden.
         _to.transfer(msg.value);
     }
 
     function sendViaSend(address payable _to) public payable {
-        // Send returns a boolean value indicating success or failure.
-        // This function is not recommended for sending Ether.
+        // Send gibt ein boolescher Wert zurück, der anzeigt, ob die Send-Funktion erfolgreich war.
+        // Diese Funktion wird nicht mehr empfohlen, um Ether zu senden.
         bool sent = _to.send(msg.value);
         require(sent, "Failed to send Ether");
     }
 
     function sendViaCall(address payable _to) public payable {
-        // Call returns a boolean value indicating success or failure.
-        // This is the current recommended method to use.
+        // Call gibt ein boolescher Wert zurück, der anzeigt, ob die Call-Funktion erfolgreich war.
+        // Die Funktion wird nicht mehr empfohlen, um Ether zu senden.
         (bool sent, bytes memory data) = _to.call{value: msg.value}("");
         require(sent, "Failed to send Ether");
     }

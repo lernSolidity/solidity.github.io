@@ -1,7 +1,7 @@
 import React from "react"
 import Example from "../../components/Example"
 import html, { version, title, description } from "./index.html"
-import style from "./../index.module.css"
+
 interface Path {
   path: string
   title: string
@@ -14,7 +14,6 @@ interface Props {
 
 const ExamplePage: React.FC<Props> = ({ prev, next }) => {
   return (
-    <>
     <Example
       version={version}
       title={title}
@@ -23,17 +22,6 @@ const ExamplePage: React.FC<Props> = ({ prev, next }) => {
       prev={prev}
       next={next}
     />
-    <div className={style.cardForImage}>
-      <p >Logs Funktion Foo</p>
-    <img src="./foo.png" alt="SimpleKI" className={style.img}  ></img >
-
-    </div>
-    
-    <div className={style.cardForImage}>
-      <p >Logs Funktion Bar</p>
-    <img src="./bar.png" alt="SimpleKI" className={style.img} ></img >
-    </div>
-    </>
   )
 }
 

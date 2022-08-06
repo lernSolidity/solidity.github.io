@@ -4,31 +4,34 @@ version: 0.8.13
 description: An example of sending Ether in Solidity
 ---
 
-### How to send Ether?
+### Wie wird Ether versendet?
 
-You can send Ether to other contracts by
+Ether kann an andere contracts gesendet werden, per:
 
-- `transfer` (2300 gas, throws error)
-- `send` (2300 gas, returns bool)
-- `call` (forward all gas or set gas, returns bool)
+- transfer (2300 gas, wirft einen Fehler aus)
+- send (2300 gas, gibt einen bool zurück)
+- call (weitergabe des gesamten oder wahlweise nur ein Bruchteil des Gasses der Transaktio. Gibt im Anschluss einen bool zurück, ob Transfer geklappt hat)
 
-### How to receive Ether?
 
-A contract receiving Ether must have at least one of the functions below
+
+### Wie wird Ether empfangen?
+
+Ein Contract, welches Ether empfängt, muss mindestens eine der folgenden Funktionen haben:
 
 - `receive() external payable`
 - `fallback() external payable`
 
-`receive()` is called if `msg.data` is empty, otherwise `fallback()` is called.
+`receive()` wird aufgerufen, wenn `msg.data` leer ist, andernfalls `fallback()` wird aufgerufen.
 
-### Which method should you use?
+### Welche Methode sollte man verwenden?
 
-`call` in combination with re-entrancy guard is the recommended method to use after December 2019.
+`call` in Kombination mit dem Schutz vor einer Reentrancy-Attacke ist die empfohlene Methode seit Dezember 2019
 
-Guard against re-entrancy by
+Schutz gegen re-entrancy mit
 
-- making all state changes before calling other contracts
-- using re-entrancy guard modifier
+- alle Zustände ändern, bevor andere Contracts aufgerufen werden
+- Schutz vor Reentrancy-Attacken durch Modifier `nonReentrant`
+
 
 ```solidity
 {{{SendingEther}}}

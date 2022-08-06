@@ -1,14 +1,15 @@
 ---
 title: Call
 version: 0.8.13
-description: In Solidity call is a low level function to interact with other contracts
+description: Wie nutze ich die Call Funktion in Solidity?
 ---
 
-`call` is a low level function to interact with other contracts.
+`call` ist eine low level Funktion um mit anderen Contracts zu interagieren.
 
-This is the recommended method to use when you're just sending Ether via calling the `fallback` function.
+Dies ist die **empfohlene Methode**, um Ether über die `fallback` Funktion zu senden.
 
-However it is not the recommend way to call existing functions.
+Es wird nicht empfohlen, die Funktionen zu aufrufen, die bereits existieren.
+
 
 ```solidity
 {{{Call}}}

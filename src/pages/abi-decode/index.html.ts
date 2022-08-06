@@ -1,10 +1,10 @@
 // metadata
 export const version = "0.8.13"
-export const title = "ABI Decode"
+export const title = "ABI Dekodierung"
 export const description = "ABI decode bytes"
 
-const html = `<p><code>abi.encode</code> encodes data into <code>bytes</code>.</p>
-<p><code>abi.decode</code> decodes <code>bytes</code> back into data.</p>
+const html = `<p>Die Funktion <code>abi.encode</code> enkodiert daten jeglicher Art in den ihre einzelnen <code>bytes</code>.</p>
+<p>Die Funktion <code>abi.decode</code> dekodiert daten jeglicher Arten von bytes zurück in die ursprüngliche Form.</p>
 <pre><code class="language-solidity"><span class="hljs-comment">// SPDX-License-Identifier: MIT</span>
 <span class="hljs-meta"><span class="hljs-keyword">pragma</span> <span class="hljs-keyword">solidity</span> ^0.8.13;</span>
 

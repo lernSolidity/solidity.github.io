@@ -1,12 +1,11 @@
 // metadata
 export const version = "0.8.13"
 export const title = "Call"
-export const description =
-  "In Solidity call is a low level function to interact with other contracts"
+export const description = "Wie nutze ich die Call Funktion in Solidity?"
 
-const html = `<p><code>call</code> is a low level function to interact with other contracts.</p>
-<p>This is the recommended method to use when you&#39;re just sending Ether via calling the <code>fallback</code> function.</p>
-<p>However it is not the recommend way to call existing functions.</p>
+const html = `<p><code>call</code> ist eine low level Funktion um mit anderen Contracts zu interagieren.</p>
+<p>Dies ist die <strong>empfohlene Methode</strong>, um Ether über die <code>fallback</code> Funktion zu senden.</p>
+<p>Es wird nicht empfohlen, die Funktionen zu aufrufen, die bereits existieren.</p>
 <pre><code class="language-solidity"><span class="hljs-comment">// SPDX-License-Identifier: MIT</span>
 <span class="hljs-meta"><span class="hljs-keyword">pragma</span> <span class="hljs-keyword">solidity</span> ^0.8.13;</span>
 
@@ -27,10 +26,9 @@ const html = `<p><code>call</code> is a low level function to interact with othe
 <span class="hljs-class"><span class="hljs-keyword">contract</span> <span class="hljs-title">Caller</span> </span>{
     <span class="hljs-function"><span class="hljs-keyword">event</span> <span class="hljs-title">Response</span>(<span class="hljs-params"><span class="hljs-keyword">bool</span> success, <span class="hljs-keyword">bytes</span> data</span>)</span>;
 
-    <span class="hljs-comment">// Let&#x27;s imagine that contract B does not have the source code for</span>
-    <span class="hljs-comment">// contract A, but we do know the address of A and the function to call.</span>
+    <span class="hljs-comment">// aber wir wissen die Adresse von A und die Funktion, die aufgerufen werden soll.</span>
     <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">testCallFoo</span>(<span class="hljs-params"><span class="hljs-keyword">address</span> <span class="hljs-keyword">payable</span> _addr</span>) <span class="hljs-title"><span class="hljs-keyword">public</span></span> <span class="hljs-title"><span class="hljs-keyword">payable</span></span> </span>{
-        <span class="hljs-comment">// You can send ether and specify a custom gas amount</span>
+        <span class="hljs-comment">// Es kann Ether gesendet und eine benutzerdefinierte Gas-Menge angegeben werden</span>
         (<span class="hljs-keyword">bool</span> success, <span class="hljs-keyword">bytes</span> <span class="hljs-keyword">memory</span> data) <span class="hljs-operator">=</span> _addr.<span class="hljs-built_in">call</span>{<span class="hljs-built_in">value</span>: <span class="hljs-built_in">msg</span>.<span class="hljs-built_in">value</span>, <span class="hljs-built_in">gas</span>: <span class="hljs-number">5000</span>}(
             <span class="hljs-built_in">abi</span>.<span class="hljs-built_in">encodeWithSignature</span>(<span class="hljs-string">"foo(string,uint256)"</span>, <span class="hljs-string">"call foo"</span>, <span class="hljs-number">123</span>)
         );
@@ -38,7 +36,7 @@ const html = `<p><code>call</code> is a low level function to interact with othe
         <span class="hljs-keyword">emit</span> Response(success, data);
     }
 
-    <span class="hljs-comment">// Calling a function that does not exist triggers the fallback function.</span>
+    <span class="hljs-comment">// Aufrufen der Funktion, die nicht existiert, führt dazu, dass die Fallback-Funktion ausgeführt wird.</span>
     <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">testCallDoesNotExist</span>(<span class="hljs-params"><span class="hljs-keyword">address</span> _addr</span>) <span class="hljs-title"><span class="hljs-keyword">public</span></span> </span>{
         (<span class="hljs-keyword">bool</span> success, <span class="hljs-keyword">bytes</span> <span class="hljs-keyword">memory</span> data) <span class="hljs-operator">=</span> _addr.<span class="hljs-built_in">call</span>(
             <span class="hljs-built_in">abi</span>.<span class="hljs-built_in">encodeWithSignature</span>(<span class="hljs-string">"doesNotExist()"</span>)

@@ -62,7 +62,7 @@ function Footer() {
         kontakt@lernsolidity.de
         </a>
       </div>
-      <div className={styles.row}>
+      {/* <div className={styles.row}>
         <a
           href="https://github.com/solidity-by-example/solidity-by-example.github.io"
           target="__blank"
@@ -76,7 +76,7 @@ function Footer() {
         >
           Lizense
         </a>
-      </div>
+      </div> */}
     </div>
   )
 }

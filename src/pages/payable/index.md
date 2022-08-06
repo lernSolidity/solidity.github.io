@@ -1,10 +1,10 @@
 ---
 title: Payable
 version: 0.8.13
-description: An example of how to use the keyword payable in Solidity
+description: Ein Bespiel für die Verwendung von payable in Solidity
 ---
 
-Functions and addresses declared `payable` can receive `ether` into the contract.
+Funktionen und Adressen, die als `payable` deklariert wurden, können `ether` als `msg.value` als "Zahlung" annehmen. 
 
 ```solidity
 {{{Payable}}}

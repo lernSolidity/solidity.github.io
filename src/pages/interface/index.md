@@ -1,18 +1,18 @@
 ---
 title: Interface
 version: 0.8.13
-description: An example of interface in Solidity
+description: Beispiel ein Interfaces in Solidity
 ---
 
-You can interact with other contracts by declaring an `Interface`.
+Du kannst ein Interface definieren, um mit anderen Contracten zu interagieren.
 
 Interface
 
-- cannot have any functions implemented
-- can inherit from other interfaces
-- all declared functions must be external
-- cannot declare a constructor
-- cannot declare state variables
+- ein Interface hat keine Funktionen implementiert
+- ein Interface kann von anderen Interfaces erben
+- alle deklarierten Funktionen müssen extern sein
+- es ist keine Konstruktor deklariert
+- keine Zustandsvariablen deklarier
 
 ```solidity
 {{{Interface}}}

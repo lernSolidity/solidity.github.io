@@ -1,19 +1,20 @@
 // metadata
 export const version = "0.8.13"
 export const title = "Interface"
-export const description = "An example of interface in Solidity"
+export const description = "Beispiel ein Interfaces in Solidity"
 
-const html = `<p>You can interact with other contracts by declaring an <code>Interface</code>.</p>
+const html = `<p>Du kannst ein Interface definieren, um mit anderen Contracten zu interagieren.</p>
 <p>Interface</p>
 <ul>
-<li>cannot have any functions implemented</li>
-<li>can inherit from other interfaces</li>
-<li>all declared functions must be external</li>
-<li>cannot declare a constructor</li>
-<li>cannot declare state variables</li>
+<li>ein Interface hat keine Funktionen implementiert</li>
+<li>ein Interface kann von anderen Interfaces erben</li>
+<li>alle deklarierten Funktionen müssen extern sein</li>
+<li>es ist keine Konstruktor deklariert</li>
+<li>keine Zustandsvariablen deklarier</li>
 </ul>
 <pre><code class="language-solidity"><span class="hljs-comment">// SPDX-License-Identifier: MIT</span>
 <span class="hljs-meta"><span class="hljs-keyword">pragma</span> <span class="hljs-keyword">solidity</span> ^0.8.13;</span>
+
 
 <span class="hljs-class"><span class="hljs-keyword">contract</span> <span class="hljs-title">Counter</span> </span>{
     <span class="hljs-keyword">uint</span> <span class="hljs-keyword">public</span> count;
@@ -39,7 +40,7 @@ const html = `<p>You can interact with other contracts by declaring an <code>Int
     }
 }
 
-<span class="hljs-comment">// Uniswap example</span>
+<span class="hljs-comment">// Uniswap Beispiel</span>
 <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">UniswapV2Factory</span> </span>{
     <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getPair</span>(<span class="hljs-params"><span class="hljs-keyword">address</span> tokenA, <span class="hljs-keyword">address</span> tokenB</span>)
         <span class="hljs-title"><span class="hljs-keyword">external</span></span>

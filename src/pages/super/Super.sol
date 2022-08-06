@@ -12,7 +12,7 @@ B   C
 
 contract A {
     // Dies ist ein Event.
-    //  Du kannst Events aus deiner Funktion ausgeben und diese werden in das Protokoll der Transaktion geschrieben.
+    // Du kannst Events aus deiner Funktion ausgeben und diese werden in das Protokoll der Transaktion geschrieben.
     // In unserem Fall wird dies in den Funktionsaufrufen nützlich sein.
     event Log(string message);
 

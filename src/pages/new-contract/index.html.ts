@@ -1,10 +1,10 @@
 // metadata
 export const version = "0.8.13"
-export const title = "Contract that Creates other Contracts"
-export const description =
-  "Learn how to create new contracts from inside of a contract with Solidity"
+export const title = "Contract die neue Contracts erstellen können."
+export const description = "Mit einem Contract einen neuen Contract erstellen."
 
-const html = `<p>Contracts can be created by other contracts using the <code>new</code> keyword. Since 0.8.0, <code>new</code> keyword supports <code>create2</code> feature by specifying <code>salt</code> options.</p>
+const html = `<p>Contracts können von anderen Contracts erstellt werden, unter Verwedung von <code>new</code>. Seit der Version 0.8.0 unterstützt das Kennwort <code>new</code> die neue Funktionalität <code>create2</code>, sofern ein <code>salt</code> als Option angegeben wird. Das <code>salt</code> Argument macht es möglich, dass kleine Veränderungen bei der Kompilierung mit eingebaut werden und jeder erstellt Contract mithilfe der Methode einen neue Adresse erhält.</p>
+<p><a href="https://docs.soliditylang.org/en/latest/control-structures.html#salted-contract-creations-create2">Lese dazu am besten die Dokumentation</a></p>
 <pre><code class="language-solidity"><span class="hljs-comment">// SPDX-License-Identifier: MIT</span>
 <span class="hljs-meta"><span class="hljs-keyword">pragma</span> <span class="hljs-keyword">solidity</span> ^0.8.13;</span>
 

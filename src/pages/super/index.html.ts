@@ -19,7 +19,7 @@ B   C
 
 <span class="hljs-class"><span class="hljs-keyword">contract</span> <span class="hljs-title">A</span> </span>{
     <span class="hljs-comment">// Dies ist ein Event.</span>
-    <span class="hljs-comment">//  Du kannst Events aus deiner Funktion ausgeben und diese werden in das Protokoll der Transaktion geschrieben.</span>
+    <span class="hljs-comment">// Du kannst Events aus deiner Funktion ausgeben und diese werden in das Protokoll der Transaktion geschrieben.</span>
     <span class="hljs-comment">// In unserem Fall wird dies in den Funktionsaufrufen nützlich sein.</span>
     <span class="hljs-function"><span class="hljs-keyword">event</span> <span class="hljs-title">Log</span>(<span class="hljs-params"><span class="hljs-keyword">string</span> message</span>)</span>;
 

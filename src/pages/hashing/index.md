@@ -1,16 +1,15 @@
 ---
-title: Hashing with Keccak256
+title: Hashing mit Keccak256
 version: 0.8.13
-description: Example of hashing using Keccak256 in Solidity
+description: Beispiel für das Hashing mithilfe der Keccak256 Funktion in Solidity
 ---
 
-`keccak256` computes the Keccak-256 hash of the input.
+`keccak256` berechnet den cryptografischen Keccak-256 hash des jeweiligen Inputs.
 
-Some use cases are:
+Verwendet wird diese Methode um:
 
-- Creating a deterministic unique ID from a input
-- Commit-Reveal scheme
-- Compact cryptographic signature (by signing the hash instead of a larger input)
+- Erstellen einer determinitischen und einzigartigen ID zu einem Input 
+- Kompakter cryptografische Signatur für größere Eingabedaten 
 
 ```solidity
 {{{Keccak256}}}

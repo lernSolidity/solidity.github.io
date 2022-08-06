@@ -1,17 +1,17 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.13;
 
-// import Foo.sol from current directory
+// Importieren von Foo.sol aus dem aktuellen Verzeichnis
 import "./Foo.sol";
-
+// Der import folgt der folgenden Syntax:
 // import {symbol1 as alias, symbol2} from "filename";
 import {Unauthorized, add as func, Point} from "./Foo.sol";
 
 contract Import {
-    // Initialize Foo.sol
+    // Initialisiere Foo.sol
     Foo public foo = new Foo();
 
-    // Test Foo.sol by getting it's name.
+    // Teste Foo.sol durch die Abfrage des Namens.
     function getFooName() public view returns (string memory) {
         return foo.name();
     }

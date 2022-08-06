@@ -1,33 +1,6 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.13;
 
-// An example of external, internal, private and public functions in Solidity
-
-// Functions and state variables have to declare whether they are accessible by other contracts.
-
-// Functions can be declared as
-
-// - `public` - any contract and account can call
-// - `private` - only inside the contract that defines the function
-// - `internal`- only inside contract that inherits an `internal` function
-// - `external` - only other contracts and accounts can call
-
-// State variables can be declared as `public`, `private`, or `internal` but not `external`.
-
-
-Ein Beispiel für externe, interne, private und öffentliche Funktionen in Solidity
-
-Funktionen und Variablen müssen angeben, ob sie von anderen Contracts ausgelesen werden dürfen.
-
-Funktionen und Zustandsvariablen können deklariert werden als:
-
-- `public` - jeder Ethereum Wallet/Account/Adresse und / oder Contract kann diese Funktion aufrufen
-- `private` - nur innerhalb des Contracts, das die Funktion beinhaltet, kann diese Funktion aufrufen
-- `internal` - nur innerhalb des Contracts, das eine `internal` Funktion vererbt werden
-- `external` - nur andere Contracts und Ethereum Wallet/Account/Adresse können diese Funktion aufrufen
-
-Zustandsvariablen können als `public`, `private`, oder `internal` deklariert werden, nicht `external`.
-
 
 contract Base {
     // Private Funktionen können nur in diesem Contract aufgerufen werden.

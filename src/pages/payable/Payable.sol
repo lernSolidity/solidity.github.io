@@ -2,37 +2,38 @@
 pragma solidity ^0.8.13;
 
 contract Payable {
-    // Payable address can receive Ether
+    // Payable Adressen können Ether empfangen
     address payable public owner;
 
-    // Payable constructor can receive Ether
+    //  Payable Konstruktoren können Ether empfangen
     constructor() payable {
         owner = payable(msg.sender);
     }
 
-    // Function to deposit Ether into this contract.
-    // Call this function along with some Ether.
-    // The balance of this contract will be automatically updated.
+    // Funktion zum Einzahlen von Ether in diesem Contract.
+    // Ruf diese Funktion mit etwas Ether auf.
+    // Der Kontostand dieses Contracts wird automatisch, um den Betrag des gesendeten Ethers aktualisiert.
     function deposit() public payable {}
 
-    // Call this function along with some Ether.
-    // The function will throw an error since this function is not payable.
+    // Rufe diese Funktion mit etwas Ether auf
+    // Wirft einen Fehler, da diese Funktion nicht payable ist.
     function notPayable() public {}
 
-    // Function to withdraw all Ether from this contract.
+    // Funktion zum Abheben aller Ether aus dieses Contract.
     function withdraw() public {
-        // get the amount of Ether stored in this contract
+        // erhalte den Betrag von Ether in diesem Contract
         uint amount = address(this).balance;
 
-        // send all Ether to owner
-        // Owner can receive Ether since the address of owner is payable
+        // sende alles Ether an den Owner
+        // Der Owner kann Ether empfangen, da die Adresse des Owners payable ist
         (bool success, ) = owner.call{value: amount}("");
         require(success, "Failed to send Ether");
     }
 
     // Function to transfer Ether from this contract to address from input
+    // Funktion zum Übertragen aller Ether aus dieses Contract an die Adresse from. 
     function transfer(address payable _to, uint _amount) public {
-        // Note that "to" is declared as payable
+        // "to" ist als payable zu deklarieren
         (bool success, ) = _to.call{value: _amount}("");
         require(success, "Failed to send Ether");
     }

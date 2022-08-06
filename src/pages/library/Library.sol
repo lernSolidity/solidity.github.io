@@ -22,7 +22,7 @@ library Math {
         } else if (y != 0) {
             z = 1;
         }
-        // else z = 0 (default value)
+        // else z = 0 (default Wert)
     }
 }
 
@@ -40,8 +40,8 @@ contract TestSafeMath {
     }
 }
 
-// Array function to delete element at index and re-organize the array
-// so that their are no gaps between the elements.
+// Array Funktion ist eine Funktion, die ein Element in einem Array löscht und das Array neu ordnet,
+// sodass keine Lücke mehr vorhanden sind bzw. die Länge des Arrays nach der Löschoperation reduziert wird.
 library Array {
     function remove(uint[] storage arr, uint index) public {
         // Move the last element into the place to delete

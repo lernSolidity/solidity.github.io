@@ -1,10 +1,12 @@
 ---
-title: Contract that Creates other Contracts
+title: Contract die neue Contracts erstellen können.
 version: 0.8.13
-description: Learn how to create new contracts from inside of a contract with Solidity
+description: Mit einem Contract einen neuen Contract erstellen.
 ---
 
-Contracts can be created by other contracts using the `new` keyword. Since 0.8.0, `new` keyword supports `create2` feature by specifying `salt` options.
+Contracts können von anderen Contracts erstellt werden, unter Verwedung von `new`. Seit der Version 0.8.0 unterstützt das Kennwort `new` die neue Funktionalität `create2`, sofern ein `salt` als Option angegeben wird. Das `salt` Argument macht es möglich, dass kleine Veränderungen bei der Kompilierung mit eingebaut werden und jeder erstellt Contract mithilfe der Methode einen neue Adresse erhält.
+
+[Lese dazu am besten die Dokumentation](https://docs.soliditylang.org/en/latest/control-structures.html#salted-contract-creations-create2)
 
 ```solidity
 {{{NewContract}}}

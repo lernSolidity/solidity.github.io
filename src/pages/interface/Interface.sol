@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.13;
 
+
 contract Counter {
     uint public count;
 
@@ -25,7 +26,7 @@ contract MyContract {
     }
 }
 
-// Uniswap example
+// Uniswap Beispiel
 interface UniswapV2Factory {
     function getPair(address tokenA, address tokenB)
         external

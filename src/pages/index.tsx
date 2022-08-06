@@ -385,34 +385,34 @@ export const ROUTES_BY_CATEGORY = [
       path: `/${route.path}`,
     })),
   },
-  {
-    title: "Applications",
-    routes: APP_ROUTES.map((route) => ({
-      ...route,
-      path: `/app/${route.path}`,
-    })),
-  },
-  {
-    title: "Hacks",
-    routes: HACK_ROUTES.map((route) => ({
-      ...route,
-      path: `/hacks/${route.path}`,
-    })),
-  },
-  {
-    title: "Tests",
-    routes: TEST_ROUTES.map((route) => ({
-      ...route,
-      path: `/tests/${route.path}`,
-    })),
-  },
-  {
-    title: "DeFi",
-    routes: DEFI_ROUTES.map((route) => ({
-      ...route,
-      path: `/defi/${route.path}`,
-    })),
-  },
+  // {
+  //   title: "Applications",
+  //   routes: APP_ROUTES.map((route) => ({
+  //     ...route,
+  //     path: `/app/${route.path}`,
+  //   })),
+  // },
+  // {
+  //   title: "Hacks",
+  //   routes: HACK_ROUTES.map((route) => ({
+  //     ...route,
+  //     path: `/hacks/${route.path}`,
+  //   })),
+  // },
+  // {
+  //   title: "Tests",
+  //   routes: TEST_ROUTES.map((route) => ({
+  //     ...route,
+  //     path: `/tests/${route.path}`,
+  //   })),
+  // },
+  // {
+  //   title: "DeFi",
+  //   routes: DEFI_ROUTES.map((route) => ({
+  //     ...route,
+  //     path: `/defi/${route.path}`,
+  //   })),
+  // },
 ]
 
 const ROUTES = ROUTES_BY_CATEGORY.map(({ routes }) => routes).flat()
@@ -453,7 +453,7 @@ export default function HomePage() {
         description="Lerne wie man Smart Contracts programmiert in der Programmiersprache Solidity anhand von Beispielen"
       />
       <h1 className={styles.header}>
-        <a href="/">Lern Solidity Programmierung</a>
+        <a href="/">Lern die Solidity Bascis</a>
       </h1>
       <div className={styles.subHeader}>Solidity Version 0.8.13</div>
       <div className={styles.card}>
