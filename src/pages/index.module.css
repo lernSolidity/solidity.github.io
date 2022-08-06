@@ -68,7 +68,7 @@
 
 
 
-.card {
+.card  {
   position: relative;
   /* margin: 300px auto 0;
   width: 500px;
@@ -87,7 +87,7 @@
 }
 
 .card:before,
-.card:after {
+.card:after, cardForImage:after, cardForImage:before {
   content: '';
   position: absolute;
   left: -2px;
@@ -179,7 +179,7 @@
 }
 
 
-.cardForImages {
+.cardForImage {
   width: min(100vw - 100px, 1000px);
   margin: auto;
   margin-bottom: 2.5rem;
