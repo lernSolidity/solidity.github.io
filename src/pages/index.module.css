@@ -87,7 +87,7 @@
 }
 
 .card:before,
-.card:after, cardForImage:after, cardForImage:before {
+.card:after {
   content: '';
   position: absolute;
   left: -2px;
@@ -108,6 +108,32 @@
   background-size: 300%;
   width: calc(100% + 4px);
   height: calc(100% + 4px);
+  z-index: -1;
+  animation: steam 20s linear infinite;
+}
+
+.cardForImage:after, .cardForImage:before {
+  content: '';
+  position: absolute;
+  left: -1.5px;
+  top: -3.5px;
+  /* margin: 12px; */
+  border-radius: 12px;
+  background: linear-gradient(
+    45deg,
+    var(--animation-color-first),
+    var(--animation-color-second),
+    var(--animation-color-third),
+    var(--animation-color-four),
+    var(--animation-color-five),
+    var(--animation-color-six),
+    var(--animation-color-seven),
+    var(--animation-color-eight),
+    var(--animation-color-nine),
+    var(--animation-color-ten));
+  background-size: 300%;
+  width: calc(100% + 2px);
+  height: calc(100% + 3px);
   z-index: -1;
   animation: steam 20s linear infinite;
 }
@@ -243,7 +269,7 @@
   animation: spin 7.5s linear infinite;
 }
 
-.cardForImage::before {
+.cardForImages::before {
   content: "";
   width: 100%;
   height: 102%;
@@ -307,8 +333,8 @@
 
 .img {
   width: min(100vw - 100px, 1000px);
-  border-radius: 8px;
-  z-index: -2;
+  border-radius: 5px;
+  /* z-index: -2; */
   /* margin: auto; */
   /* padding: 10px; */
   /* width: 95vw; */
