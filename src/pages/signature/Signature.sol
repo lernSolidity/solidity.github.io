@@ -15,8 +15,6 @@ Wie wird signiert und verifiert?
 2. Wiederherstellen des Signers aus der Signatur und dem Hash
 3. Vergleiche den wiederhergestellten Signer mit dem angegebenen Signer der ursprünglichen Nachricht
 */
-*/
-*/
 
 contract VerifySignature {
     /* 1. Frontend Signer erhalten, welcher eine Nachricht signieren soll
