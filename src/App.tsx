@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import { useAppContext } from "./contexts/AppContext"
 import styles from "./App.module.css"
 import Header from "./components/Header"
-import Footer from "./components/Footer"
+import Footer from "./components/NewFooter"
 import routes from "./routes"
 import { getPrevNextPaths } from "./pages/index"
 

@@ -2,10 +2,8 @@ import React from "react"
 import styles from "./Footer.module.css"
 import sce from "./sce.png"
 import youTube from "./youtube.png"
-import telegram from "./telegram.png"
 import discord from "./discord.png"
 
-// Khan Academy
 const ADDRESS = "0xAE10F380F3d2A9CFb3eD957ad5829ec15A1c7e80"
 
 function Footer() {
@@ -22,12 +20,6 @@ function Footer() {
           <img src={discord} alt="discord" className={styles.discord} />
           <a href="https://discord.gg/bt8FK2wkcW" target="__blank">
             Discord
-          </a>
-        </div>
-        <div className={styles.row}>
-          <img src={telegram} alt="telegram" className={styles.telegram} />
-          <a href="https://t.me/smartcontractprogrammer" target="__blank">
-            Telegram
           </a>
         </div>
         <div className={styles.row}>

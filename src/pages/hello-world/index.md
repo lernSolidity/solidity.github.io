@@ -1,12 +1,12 @@
 ---
 title: Hello World
 version: 0.8.13
-description: Hello world in Solidity
+description: Hello World in Solidity
 ---
 
-Das HelloWorld Beispiel ist das klassiche Anfangsbeispiel für jede Programmiersprache. 
+Das "Hello World" ist das klassiche Anfangsbeispiel für jede Programmiersprache. 
 
-Um mit dem Programmieren von Smart Contract zu starten, kannst du ganz in deinem Browser starten mit Remix. 
+Um mit dem Programmieren von Smart Contract zu starten, brauchst du erstmal keine große Entwicklungsumgebung installieren. Du kannst ganz einfach in deinem Browser [mit Remix](https://remix.ethereum.org/) starten. 
 
 Mit dem Stichwort `pragma` wird die Verision des Solidity Compilers festgelegt. Aktuell verwenden wir die Solidity Version *0.8.13*.
 

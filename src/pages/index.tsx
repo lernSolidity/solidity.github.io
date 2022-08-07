@@ -19,7 +19,7 @@ const SOL_ROUTES: Route[] = [
   },
   {
     path: "primitives",
-    title: "Welche primitiven Data Typen gibt es?",
+    title: "Primitive Daten Typen",
   },
   {
     path: "variables",
@@ -31,11 +31,11 @@ const SOL_ROUTES: Route[] = [
   },
   {
     path: "immutable",
-    title: "Was ist veränderbar?",
+    title: "Immutable",
   },
   {
     path: "state-variables",
-    title: "Wie lese oder schreibt man in Zustandsvariablen?",
+    title: "Zustandsvariablen",
   },
   {
     path: "ether-units",
@@ -74,7 +74,7 @@ const SOL_ROUTES: Route[] = [
   },
   {
     path: "data-locations",
-    title: "Speicherorte - Was ist Storage, Memory und Calldata?",
+    title: "Was ist Storage, Memory und Calldata?",
   },
   // function
   {
@@ -100,11 +100,11 @@ const SOL_ROUTES: Route[] = [
   // inheritance
   {
     path: "constructor",
-    title: "Konstruktur | Constructor",
+    title: "Konstruktur",
   },
   {
     path: "inheritance",
-    title: "Vererbung | Inheritance",
+    title: "Vererbung",
   },
   {
     path: "shadowing-inherited-state-variables",
@@ -112,11 +112,11 @@ const SOL_ROUTES: Route[] = [
   },
   {
     path: "super",
-    title: "Calling Parent Contracts",
+    title: "Aufrufen vererbter Funktionen",
   },
   {
     path: "visibility",
-    title: "Visibility",
+    title: "Pure, View und Private",
   },
   {
     path: "interface",
@@ -129,7 +129,7 @@ const SOL_ROUTES: Route[] = [
   },
   {
     path: "sending-ether",
-    title: "Sending Ether - Transfer, Send, and Call",
+    title: "Ether senden - Transfer, Send und Call",
   },
   {
     path: "fallback",
@@ -146,16 +146,16 @@ const SOL_ROUTES: Route[] = [
   },
   {
     path: "function-selector",
-    title: "Function Selector",
+    title: "Funktions Selector",
   },
 
   {
     path: "calling-contract",
-    title: "Calling Other Contract",
+    title: "Aufrufen anderer Contracts",
   },
   {
     path: "new-contract",
-    title: "Creating Contracts from a Contract",
+    title: "Erstelle Contracts in einem Contract",
   },
   // misc
   {
@@ -177,15 +177,15 @@ const SOL_ROUTES: Route[] = [
   // crypto
   {
     path: "hashing",
-    title: "Hashing with Keccak256",
+    title: "Hashing mit Keccak256",
   },
   {
     path: "signature",
-    title: "Verifying Signature",
+    title: "Verifiziere Signaturen",
   },
   {
     path: "gas-golf",
-    title: "Gas Optimizations",
+    title: "Gas Optimierungen",
   },
 ]
 
@@ -453,7 +453,7 @@ export default function HomePage() {
         description="Lerne wie man Smart Contracts programmiert in der Programmiersprache Solidity anhand von Beispielen"
       />
       <h1 className={styles.header}>
-        <a href="/">Lern die Solidity Bascis</a>
+        <a href="/">Lern die Solidity Basics</a>
       </h1>
       <div className={styles.subHeader}>Solidity Version 0.8.13</div>
       <div className={styles.card}>

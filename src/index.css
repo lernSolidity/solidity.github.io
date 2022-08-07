@@ -1,3 +1,8 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+
 :root {
   --black: #252519;
 }
@@ -31,6 +36,11 @@ body.light {
   --link-color: #261a3b;
   --shadow-color: rgba(0, 0, 0, 0.2);
 
+  --footer-wave-top: rgb(209,250,229);
+  --footer-wave-bottom: rgb(236,252,245);
+  --footer-button: rgb(110,231,183, 0.4);
+  --footer-text: #484848;
+
   --animation-color-first: #19ff00;
   --animation-color-second: #61ff00;
   --animation-color-third: #86ff00;
@@ -48,6 +58,12 @@ body.dark {
   --code-bg: #0d1117;
   --link-color: #f6f6f6;
   --shadow-color: rgba(255, 255, 255, 0.1);
+
+  --footer-wave-top: rgb(209, 209, 250);
+  --footer-wave-bottom: rgb(236, 237, 252);
+  --footer-button: rgb(110, 114, 231, 0.4); 
+  --footer-text: #484848;
+
   --animation-color-first: #5ddcff;
   --animation-color-second: #00b6ff;
   --animation-color-third: #008cff;
@@ -304,3 +320,5 @@ body.dark .hljs-property,
 body.dark .hljs-punctuation,
 body.dark .hljs-tag {
 }
+
+
