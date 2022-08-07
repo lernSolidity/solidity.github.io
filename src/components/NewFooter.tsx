@@ -20,7 +20,7 @@ interface ArrayInhalt {
 
 function LinkList({name, listWithLinks}:Props) {
   return (
-    <div className={stylesLink.container}>
+    <div className={stylesLink.container}> 
       <span >
       {name}
       </span>
