@@ -3,7 +3,7 @@
   color: var(--color);
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: right;
 }
 .row {
   display: flex;

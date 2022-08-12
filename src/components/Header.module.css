@@ -7,7 +7,7 @@
   padding: 2rem;
 }
 .component a {
-  text-decoration: none;
+  text-decoration: underline;
 }
 .logo {
   width: 60px;

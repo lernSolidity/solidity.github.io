@@ -25,6 +25,8 @@
   margin-top: 10px;
   margin-bottom: 10px;
   white-space: nowrap;
+  font-size: large;
+  text-decoration: underline;
 }
 
 .label {
@@ -32,7 +34,7 @@
 }
 
 .header a {
-  text-decoration: none;
+  text-decoration: underline;
   line-height: normal;
 }
 

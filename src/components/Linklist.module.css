@@ -5,12 +5,11 @@
   margin-right: auto; */
   margin-top: 0.25rem;
   margin-bottom: 0.25rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  margin-left: auto;
-
+  /* padding-left: 1rem;
+  padding-right: 1rem; */
+  /* align-items: center; */
+  /* margin-left: auto; */
 }
-
 
 .container span {
   /* "block uppercase text-gray-600 text-md lg:text-lg font-mono font-semibold mb-4 underline" */

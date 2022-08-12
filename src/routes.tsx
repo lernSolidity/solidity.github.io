@@ -85,6 +85,7 @@ import component_variables from "./pages/variables"
 import component_view_and_pure_functions from "./pages/view-and-pure-functions"
 import component_visibility from "./pages/visibility"
 import component_ from "./pages"
+import component_impressum from "./pages/Impressum"
 
 interface Path {
   title: string
@@ -446,6 +447,10 @@ const routes: Route[] = [
     {
         path: "/visibility",
         component: component_visibility
+    },
+    {
+        path: "/Impressum",
+        component: component_impressum
     },
     {
         path: "",

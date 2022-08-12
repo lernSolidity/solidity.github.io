@@ -51,12 +51,14 @@ const Example: React.FC<Props> = ({
           )}
         </div>
 
-        <p>
-          Probiere es aus mit {" "}
-          <a href="https://remix.ethereum.org" target="__blank">
-            Remix
-          </a>
-        </p>
+        {title !== "Impressum | Lern Solidity" ? (
+          <p>
+            Probiere es aus mit{" "}
+            <a href="https://remix.ethereum.org" target="__blank">
+              Remix
+            </a>
+          </p>
+        ) : null}
       </div>
     </div>
   )

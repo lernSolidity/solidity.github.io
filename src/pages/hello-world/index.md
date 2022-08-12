@@ -10,7 +10,11 @@ Um mit dem Programmieren von Smart Contract zu starten, brauchst du erstmal kein
 
 Mit dem Stichwort `pragma` wird die Verision des Solidity Compilers festgelegt. Aktuell verwenden wir die Solidity Version *0.8.13*.
 
-Durch das **^** compiler version must be greater than or equal to 0.8.13 and less than 0.9.0
+Durch das **^** compiler version wird angegeben, dass die Version größer als 0.8.0 und kleiner als die Version 0.9.0 sein muss. 
+Versionen in Solidity sind in der Regel als `0.x.x` angegeben. 
+
+```solidity
+
 
 ```solidity
 {{{HelloWorld}}}

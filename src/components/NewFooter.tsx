@@ -84,23 +84,23 @@ const OpenseaDict = {
   style: "text-[#5865F2]",
 };
 const dictList = [YoutubeDict, TwitterDict, DiscordDict, InstagramDict, CalendlyDict];
-const DatenschutzDict = {
-  name: "Datenschutz",
-  link: "/Datenschutz",
-};
+// const DatenschutzDict = {
+//   name: "Datenschutz",
+//   link: "/Datenschutz",
+// };
 const ImpressumDict = {
   name: "Impressum",
   link: "/Impressum",
 };
-const KontaktDict = {
-  name: "Kontakt",
-  link: "/Kontakt",
-};
+// const KontaktDict = {
+//   name: "Kontakt",
+//   link: "/Kontakt",
+// };
 const zeroGasList = [Voting,OpenseaDict];
 const OtherLinksList = [
-  DatenschutzDict,
+  // DatenschutzDict,
   ImpressumDict,
-  KontaktDict,
+  // KontaktDict,
   
 ];
 
