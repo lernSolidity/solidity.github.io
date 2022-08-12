@@ -3,10 +3,8 @@ export const version = "0.8.13"
 export const title = "For und While Loop/schleife"
 export const description = "Beispiele für eine for und eine while loop/schleife in Solidity"
 
-const html = `<p>Solidity supports <code>for</code>, <code>while</code>, and <code>do while</code> loops.
-Solidity unterstützt <code>for</code>, <code>while</code>, und <code>do while</code> loops.</p>
-<p>Don&#39;t write loops that are unbounded as this can hit the gas limit, causing your transaction to fail.
-Es ist ratsam, keine Loops zu verwende, da es möglich ist, dass die Schleife/Loop niemals endet und der Nutzer seine gesamten Transaktionkosten verliert. </p>
+const html = `<p>Solidity unterstützt <code>for</code>, <code>while</code>, und <code>do while</code> loops.</p>
+<p>Es ist ratsam, keine Loops zu verwenden, da es möglich ist, dass die Schleife/Loop niemals endet und der Nutzer seine gesamten Transaktionkosten verliert. </p>
 <p>Aus diesem Grund werden <code>while</code> und <code>do while</code> loops sehr selten verwendet. </p>
 <pre><code class="language-solidity"><span class="hljs-comment">// SPDX-License-Identifier: MIT</span>
 <span class="hljs-meta"><span class="hljs-keyword">pragma</span> <span class="hljs-keyword">solidity</span> ^0.8.13;</span>
